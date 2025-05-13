@@ -44,7 +44,7 @@ const Footer = () => {
                 variant="solid"
                 onPress={() => {
                   setButtonLoading(true);
-                  router.push(`https://dmci-admin-agent.vercel.app/auth/login`);
+                  router.push(`https://dmci-agent-website-admin.vercel.app/auth/login`);
                 }}
               >
                 Log in as Admin
