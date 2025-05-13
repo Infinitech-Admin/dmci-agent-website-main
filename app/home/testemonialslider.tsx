@@ -65,10 +65,10 @@ const TestimonialSlider: React.FC<TestimonialProps> = ({ data }) => {
             <div key={testimonial.id} className="keen-slider__slide border rounded-lg shadow-sm relative">
               <video
                 ref={videoRef}
-                src={`https://infinitech-testing5.online/videos/${testimonial.video}`}
+                src={`https://infinitech-testing5.online/${testimonial.video}`}
                 className="w-full h-80 rounded-md object-cover"
                 style={{ aspectRatio: "16/9" }}
-                poster={`https://infinitech-testing5.online/videos/${testimonial.thumbnail}`}
+                poster={`https://infinitech-testing5.online/${testimonial.thumbnail}`}
                 controls={isPlaying}
               />
               {!isPlaying && (
