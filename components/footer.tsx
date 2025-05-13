@@ -183,7 +183,7 @@ const Footer = () => {
             <Link
               className="hover:to-blue-500"
               target="_blank"
-              href="https://infinitech-2025.vercel.app"
+              href="https://infinitech-website.vercel.app"
             >
               Infinitech Advertising Corporation.
             </Link>{" "}
