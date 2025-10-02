@@ -71,11 +71,7 @@ export const siteConfig = {
       label: "Loan Calculator",
       href: "/calculator",
     },
-    {
-      label: "Download App",
-      href: "dmci-application.apk",
-      download: true,
-    },
+    
     
     {
       label: "Apply Now",
