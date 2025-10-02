@@ -1,3 +1,4 @@
+// app/layout.tsx
 import "@/styles/globals.css";
 import { Metadata, Viewport } from "next";
 import clsx from "clsx";
@@ -9,8 +10,7 @@ import FloatingIcons from "@/components/socmed";
 import Chatbot from "@/components/chatbot";
 import { Poppins } from "next/font/google";
 import { Toaster } from "react-hot-toast";
-import ScrollToTop from "@/components/scrollToTop";
-import RegisterSW from "./register-sw";
+import ScrollToTop from "@/components/scrollToTop"; 
 
 export const metadata: Metadata = {
   title: {
@@ -18,22 +18,24 @@ export const metadata: Metadata = {
     template: `%s - ${siteConfig.name}`,
   },
   description: siteConfig.description,
-  manifest: "/manifest.json",
   icons: {
-    icon: "https://www.dmcihomes.com/frontend/images/favicon.ico",
-    apple: "/icons/icon-192x192.png",
+    icon: [
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/android-chrome-192x192.png", sizes: "192x192", type: "image/png" },
+      { url: "/android-chrome-512x512.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: "/apple-touch-icon.png",
+    shortcut: "/favicon.ico",
   },
-  appleWebApp: {
-    capable: true,
-    statusBarStyle: "default",
-    title: "DMCI Homes",
-  },
+  manifest: "/manifest.json",   // ✅ Added for PWA
+  themeColor: "#004aad",        // ✅ DMCI brand color
 };
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#1e40af" },
-    { media: "(prefers-color-scheme: dark)", color: "#1e40af" },
+    { media: "(prefers-color-scheme: light)", color: "white" },
+    { media: "(prefers-color-scheme: dark)", color: "black" },
   ],
 };
 
@@ -52,18 +54,13 @@ export default function RootLayout({
 }) {
   return (
     <html suppressHydrationWarning lang="en">
-      <head>
-        <link rel="manifest" href="/manifest.json" />
-        <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
-        <meta name="theme-color" content="#1e40af" />
-      </head>
-      <body className={`bg-background ${poppins.className}`}>
-        <RegisterSW />
+      <head />
+      <body className={`bg-background antialiased ${poppins.className}`}>
         <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
-          <div className="flex flex-col">
+          <div className="flex flex-col min-h-screen">
             <Navbar />
-            <main>
-              <Toaster position="top-right" reverseOrder={false} />
+            <main className="flex-1">
+              <Toaster position="top-right" reverseOrder={false} />  
               <ScrollToTop />
               {children}
               <FloatingIcons />
