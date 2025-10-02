@@ -10,16 +10,7 @@ const CompanyInfo = () => {
   const router = useRouter();
   return (
     <>
-      <div>
-        <h1 className="font-bold text-xl">
-          You can also reach us via the following channels.
-        </h1>
-        <p className="text-default-500 text-sm">
-          We always enjoy hearing from you and there are several ways that you can
-          reach us.
-        </p>
-      </div>
-  
+      
       <div className="flex gap-3 pt-8">
         <div className="bg-green-200 inline-flex h-12 items-center py-4 px-2 text-green-800 rounded-lg">
           <MdPhone size={32} />
