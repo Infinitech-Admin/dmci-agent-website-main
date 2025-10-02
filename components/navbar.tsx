@@ -1,4 +1,4 @@
-"use client";
+"use client"
 import {
   Navbar as NextUINavbar,
   NavbarContent,
@@ -13,30 +13,66 @@ import {
   ModalBody,
   ModalFooter,
   Button,
+  Divider,
 } from "@heroui/react";
 
 import { useDisclosure } from "@heroui/react";
 import NextLink from "next/link";
 import clsx from "clsx";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { usePathname, useRouter } from "next/navigation";
-import { Divider } from "@heroui/react";
 
 import AppFeatures from "./features";
-import DownloadApk from "./downloadapk";
-
 import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "@/components/theme-switch";
 import { BrandLogo } from "@/components/icons";
 import FormUtilities from "./navbar/formsutilities";
+import { LuDownload } from "react-icons/lu";
 
 export const Navbar = () => {
-  const pathname = usePathname();
+  const pathname = typeof window !== "undefined" ? usePathname() : "";
   const router = useRouter();
   const [menuOpen, setMenuOpen] = useState(false);
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [selectedLink, setSelectedLink] = useState("");
 
+  // 👉 PWA INSTALL STATE
+  const [deferredPrompt, setDeferredPrompt] = useState<any>(null);
+  const [showInstallButton, setShowInstallButton] = useState(false);
+
+  useEffect(() => {
+    const handleBeforeInstallPrompt = (e: Event) => {
+      e.preventDefault();
+      setDeferredPrompt(e);
+      setShowInstallButton(true);
+    };
+
+    const handleAppInstalled = () => {
+      setShowInstallButton(false);
+      setDeferredPrompt(null);
+    };
+
+    window.addEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
+    window.addEventListener("appinstalled", handleAppInstalled);
+
+    return () => {
+      window.removeEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
+      window.removeEventListener("appinstalled", handleAppInstalled);
+    };
+  }, []);
+
+  const handleInstallApp = async () => {
+    if (!deferredPrompt) return;
+    deferredPrompt.prompt();
+    const { outcome } = await deferredPrompt.userChoice;
+
+    if (outcome === "accepted") {
+      setShowInstallButton(false);
+    }
+    setDeferredPrompt(null);
+  };
+
+  // 👉 ROOM PLANNER HANDLER
   const handleLinkClick = (href: string) => {
     if (href === siteConfig.links.planner) {
       setSelectedLink(href);
@@ -64,6 +100,7 @@ export const Navbar = () => {
         maxWidth="full"
         onMenuOpenChange={setMenuOpen}
       >
+        {/* Brand */}
         <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
           <NavbarBrand as="li" className="gap-3">
             <NextLink className="flex justify-between items-center gap-1" href="/">
@@ -73,6 +110,7 @@ export const Navbar = () => {
           </NavbarBrand>
         </NavbarContent>
 
+        {/* Desktop Nav */}
         <NavbarContent className="hidden xl:flex" justify="center">
           <NavbarItem>
             <ul className="hidden lg:flex gap-6">
@@ -93,20 +131,38 @@ export const Navbar = () => {
           </NavbarItem>
         </NavbarContent>
 
-        <NavbarContent className="hidden xl:flex basis-1/5 sm:basis-full" justify="end">
-          <NavbarItem className="hidden sm:flex gap-2">
-            <FormUtilities />
-            {/* <AppFeatures /> */}
-            <DownloadApk />
-            <ThemeSwitch />
-          </NavbarItem>
-        </NavbarContent>
+        {/* Desktop Right Section */}
+          <NavbarContent className="hidden xl:flex basis-1/5 sm:basis-full" justify="end">
+            <NavbarItem className="flex items-center gap-3">
+              {/* Customer Reservation Form */}
+              <FormUtilities />
 
+              {/* ✅ Install App aligned with icons */}
+              {showInstallButton && (
+                <Button
+                  onPress={handleInstallApp}
+                  isIconOnly
+                  className="bg-green-600 text-white rounded-full p-2 hover:bg-green-700"
+                  aria-label="Install App"
+                >
+                  <LuDownload size={20} />
+                </Button>
+              )}
+
+              {/* Theme Switch (last sa kanan) */}
+              <ThemeSwitch />
+            </NavbarItem>
+          </NavbarContent>
+
+
+
+        {/* Mobile Navbar */}
         <NavbarContent className="xl:hidden basis-1 pl-4" justify="end">
           <ThemeSwitch />
           <NavbarMenuToggle />
         </NavbarContent>
 
+        {/* Mobile Menu */}
         <NavbarMenu>
           <div className="mt-2 flex flex-col gap-2">
             {siteConfig.navMenuItems.map((item, index) => (
@@ -155,6 +211,19 @@ export const Navbar = () => {
                 )}
               </NavbarMenuItem>
             ))}
+
+            {/* ✅ Install App inside Mobile Menu */}
+            {showInstallButton && (
+              <NavbarMenuItem
+                className="cursor-pointer text-green-600 font-medium"
+                onClick={() => {
+                  handleInstallApp();
+                  setMenuOpen(false);
+                }}
+              >
+                Install App
+              </NavbarMenuItem>
+            )}
           </div>
         </NavbarMenu>
       </NextUINavbar>
