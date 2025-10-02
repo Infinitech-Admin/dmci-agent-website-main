@@ -1,3 +1,4 @@
+// app/layout.tsx
 import "@/styles/globals.css";
 import { Metadata, Viewport } from "next";
 import clsx from "clsx";
@@ -18,8 +19,17 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   icons: {
-    icon: "https://www.dmcihomes.com/frontend/images/favicon.ico",
+    icon: [
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/android-chrome-192x192.png", sizes: "192x192", type: "image/png" },
+      { url: "/android-chrome-512x512.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: "/apple-touch-icon.png",
+    shortcut: "/favicon.ico",
   },
+  manifest: "/manifest.json",   // ✅ Added for PWA
+  themeColor: "#004aad",        // ✅ DMCI brand color
 };
 
 export const viewport: Viewport = {
@@ -37,7 +47,6 @@ const poppins = Poppins({
   variable: "--font-poppins",
 });
 
-
 export default function RootLayout({
   children,
 }: {
@@ -46,17 +55,13 @@ export default function RootLayout({
   return (
     <html suppressHydrationWarning lang="en">
       <head />
-      <body className={`bg-background ${poppins.className}`}
-      >
+      <body className={`bg-background antialiased ${poppins.className}`}>
         <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
-          <div className="flex flex-col">
+          <div className="flex flex-col min-h-screen">
             <Navbar />
-            <main>
-              <Toaster
-                position="top-right"
-                reverseOrder={false}
-              />  
-              <ScrollToTop /> {/* ✅ This ensures scroll resets on each page change */}
+            <main className="flex-1">
+              <Toaster position="top-right" reverseOrder={false} />  
+              <ScrollToTop />
               {children}
               <FloatingIcons />
             </main>
@@ -64,7 +69,6 @@ export default function RootLayout({
           </div>
           <Chatbot />
         </Providers>
-
       </body>
     </html>
   );
