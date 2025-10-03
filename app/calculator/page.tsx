@@ -99,85 +99,81 @@ const LoanCalculator: React.FC = () => {
 
 
     // Document Title
-  doc.setFont("helvetica", "bold");
-  doc.setFontSize(16);
-  const title = "by: Ella Carmela Sarmiento";
-  const titleWidth = doc.getTextWidth(title);
-  doc.text(title, (pageWidth - titleWidth) / 2, 20);
+    doc.setFont("helvetica", "bold");
+doc.setFontSize(16);
+const title = "by: Ella Carmela Sarmiento";
+const titleWidth = doc.getTextWidth(title);
+doc.text(title, (pageWidth - titleWidth) / 2, 30);
 
-  // Address Info
-  doc.setFont("helvetica", "normal");
-  doc.setFontSize(8);
-  const address = "DMCI Homes Corporate Center, 1321 Apolinario Street, Bangkal, Makati City, Metro Manila, PH 1233";
-  doc.text(address, pageWidth / 2, 26, { align: "center" });
+// Address (Centered)
+doc.setFont("helvetica", "normal");
+doc.setFontSize(8);
+const address = "DMCI Homes Corporate Center, 1321 Apolinario Street, Bangkal, Makati City, Metro Manila, PH 1233";
+doc.text(address, pageWidth / 2, 34, { align: "center" });
 
-  const phone = "Phone Number: (+63)9175-4809-99";
-  doc.text(phone, pageWidth / 2, 30, { align: "center" });
+const phone = "Phone Number: (+63)9175-4809-99";
+doc.text(phone, pageWidth / 2, 38, { align: "center" });
 
-  const email = "Email: elladmcihomes.ph@gmail.com";
-  doc.text(email, pageWidth / 2, 34, { align: "center" });
+const email = "Email: elladmcihomes.ph@gmail.com";
+doc.text(email, pageWidth / 2, 42, { align: "center" });
 
-  // Subtitle
-  doc.setFont("helvetica", "bold");
-  doc.setFontSize(14);
-  doc.setTextColor(40, 90, 150); // blue shade
-  doc.text("Loan Calculation Results", pageWidth / 2, 45, { align: "center" });
+// Subtitle (Centered)
+doc.setFont("helvetica", "bold");
+doc.setFontSize(14);
+const subtitle = "Loan Calculation Results";
+doc.text(subtitle, pageWidth / 2, 50, { align: "center" });
 
-  doc.setTextColor(0, 0, 0);
+// Draw Header Line
+doc.line(20, 52, 190, 52);
 
-  // ===== TABLE HEADER =====
-  doc.setFillColor(40, 90, 150); // dark blue
-  doc.setTextColor(255, 255, 255);
-  doc.rect(20, 55, 170, 10, "F"); // filled header background
-  doc.setFontSize(12);
-  doc.text("LOAN DETAILS", 25, 62);
-  doc.text("VALUE", 135, 62);
+// Table Headers
+doc.setFont("helvetica", "normal");
+doc.setFontSize(12);
+doc.text("LOAN DETAILS", 24, 58);
+doc.text("VALUE", 130, 58);
 
-  // Reset text color for content
-  doc.setTextColor(0, 0, 0);
+// Draw Header Line
+doc.line(20, 62, 190, 62);
 
-  // Format Years and Months
-  const formattedYears = selectedYears === 1 ? "1 year" : `${selectedYears || 0} years`;
-  const formattedMonths = selectedMonths === 1 ? "1 month" : `${selectedMonths || 0} months`;
+// Format Years and Months
+const formattedYears = selectedYears === 1 ? "1 year" : `${selectedYears || 0} years`;
+const formattedMonths = selectedMonths === 1 ? "1 month" : `${selectedMonths || 0} months`;
 
-  // Table Data
-  const rows = [
-    ["Years", formattedYears],
-    ["Months", formattedMonths],
-    ["Loan Amount", `PHP ${parseFloat(loanAmount || "0").toLocaleString(undefined, { minimumFractionDigits: 2 })}`],
-    ["Interest Rate", `${parseFloat(interestRate || "0").toLocaleString(undefined, { minimumFractionDigits: 2 })}%`],
-    ["Total Loan Amount (w/ interest)", "PHP " + (results.totalLoan || "0")],
-    ["Monthly Payment", "PHP " + (results.monthlyPayment || "0")],
-    ["Total Amount", "PHP " + (results.totalAmount || "0")],
-  ];
+// Table Rows Data
+const rows = [
+  ["Years", formattedYears],
+  ["Months", formattedMonths],
+  ["Loan Amount", `PHP ${parseFloat(loanAmount || "0").toLocaleString(undefined, { minimumFractionDigits: 2 })}`],
+  ["Interest Rate", `${parseFloat(interestRate || "0").toLocaleString(undefined, { minimumFractionDigits: 2 })}%`],
+  ["Total Loan Amount (w/ interest)", "PHP " + (results.totalLoan || "0")],
+  ["Monthly Payment", "PHP " + (results.monthlyPayment || "0")],
+  ["Total Amount", "PHP " + (results.totalAmount || "0")],
+];
 
-  let yPosition = 72;
-  rows.forEach((row, index) => {
-    // Alternate row background color
-    if (index % 2 === 0) {
-      doc.setFillColor(240, 240, 240); // light gray
-      doc.rect(20, yPosition - 6, 170, 10, "F");
-    }
+// Table Content
+let yPosition = 72;
+rows.forEach((row) => {
+  doc.text(row[0], 24, yPosition);
+  doc.text(row[1], 130, yPosition, { align: "left" });
+  doc.line(20, yPosition + 2, 190, yPosition + 2); // Draw line after each row
+  yPosition += 10;
+});
 
-    doc.setFont("helvetica", "normal");
-    doc.setFontSize(11);
-    doc.text(row[0], 25, yPosition);
-    doc.text(row[1], 135, yPosition);
-    yPosition += 10;
-  });
+// Draw Table Borders
+const startY = 52;
+const endY = yPosition - 8;
+doc.line(20, startY, 20, endY); // Left border
+doc.line(120, startY, 120, endY); // Divider between columns
+doc.line(190, startY, 190, endY); // Right border
 
-  // ===== FOOTER =====
-  const pageHeight = doc.internal.pageSize.getHeight();
-  doc.setFontSize(8);
-  doc.setTextColor(100);
-  doc.text("© 2025 DMCI Homes. All rights reserved.", pageWidth / 2, pageHeight - 10, { align: "center" });
-  doc.text(`Page 1 of 1`, pageWidth - 20, pageHeight - 10, { align: "right" });
+// Save the PDF
+doc.save("loan_calculation_results.pdf");
 
-  // Save PDF
-  doc.save("loan_calculation_results.pdf");
+// Success handler
+setDownloadSuccess(true);
 
-  setDownloadSuccess(true);
-};
+  };
+
 
   return (
     <div className="mx-auto flex-grow px-4 xl:px-24 w-full flex flex-col gap-4">
@@ -281,3 +277,4 @@ const LoanCalculator: React.FC = () => {
 };
 
 export default LoanCalculator;
+ 
