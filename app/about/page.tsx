@@ -3,7 +3,7 @@ import ContactUs from "../home/contactus";
 import VisionMission from "./visionmission";
 import CoreValues from "./corevalues";
 import BrandHistory from "./brandhistory";
-import BrandValues from "./brandvalues";
+// import BrandValues from "./brandvalues";
 import Certificates from "./certificate";
 import Partners from "./partners";
 import Executives from "./executives";
@@ -18,7 +18,7 @@ export default function AboutPage() {
       <VisionMission />
       <CoreValues />
       <BrandHistory />
-      <BrandValues />
+      {/* <BrandValues /> */}
       <Certificates />
       <Partners />
       <Executives />
