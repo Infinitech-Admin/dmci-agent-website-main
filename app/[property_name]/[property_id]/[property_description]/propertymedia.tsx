@@ -97,7 +97,7 @@ const PropertyImage: React.FC<ListingsMediaProps> = ({ data }) => {
 
     // Main image for large screens
     const mainImage = parsedImages.length
-        ? `https://infinitech-testing5.online/properties/images/${parsedImages[0]}`
+        ? `https://infinitech-api6.site/properties/images/${parsedImages[0]}`
         : defaultImage;
 
     return (
@@ -123,7 +123,7 @@ const PropertyImage: React.FC<ListingsMediaProps> = ({ data }) => {
                         {Array.from({ length: 4 }).map((_, index) => {
                             const image = parsedImages[index + 1]; // Skip the first image
                             const imageUrl = image
-                                ? `https://infinitech-testing5.online/properties/images/${image}`
+                                ? `https://infinitech-api6.site/properties/images/${image}`
                                 : defaultImage;
 
                             return (
@@ -155,12 +155,12 @@ const PropertyImage: React.FC<ListingsMediaProps> = ({ data }) => {
                                     <div key={index} className="keen-slider__slide">
                                         <PhotoView
                                             data-title={`Slide ${index + 1}`}
-                                            src={`https://infinitech-testing5.online/properties/images/${image}`}
+                                            src={`https://infinitech-api6.site/properties/images/${image}`}
                                         >
                                             <Image
                                                 alt={`Slide ${index + 1}`}
                                                 className="w-full h-auto object-cover rounded-lg"
-                                                src={`https://infinitech-testing5.online/properties/images/${image}`}
+                                                src={`https://infinitech-api6.site/properties/images/${image}`}
                                                 width={1000}
                                                 height={300}
                                             />
