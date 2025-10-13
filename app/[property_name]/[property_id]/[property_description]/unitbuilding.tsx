@@ -38,7 +38,7 @@ const BuildingSection: React.FC<BuildingSectionProps> = ({ data }) => {
                 alt="NextUI hero Image"
                 height={450}
                 width={1000}
-                src={`https://infinitech-testing5.online/properties/buildings/${build.image}`}
+                src={`https://infinitech-api6.site/properties/buildings/${build.image}`}
               />
 
               <div className="absolute inset-0 bg-black bg-opacity-60 rounded-2xl z-10 hover:bg-opacity-20" />
