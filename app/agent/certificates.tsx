@@ -21,14 +21,14 @@ const AgentCertificates: React.FC<AgentDataProps> = ({ agentdata }) => {
           <PhotoView
           key={index}
             data-title={Certificate.title}
-            src={`https://infinitech-testing5.online/certificates/${Certificate.image}`}
+            src={`https://infinitech-api6.site/certificates/${Certificate.image}`}
           >
             <Image
               isZoomed
               alt={Certificate.title}
               height={300}
               width={1000}
-              src={`https://infinitech-testing5.online/certificates/${Certificate.image}`}
+              src={`https://infinitech-api6.site/certificates/${Certificate.image}`}
             />
           </PhotoView>
         ))}
