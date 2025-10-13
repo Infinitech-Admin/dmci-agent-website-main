@@ -21,7 +21,7 @@ const AgentGallery: React.FC<AgentDataProps> = ({ agentdata }) => {
           <PhotoView
             key={index}
             data-title={data.name}
-            src={`https://infinitech-testing5.online/images/${data.image}`}
+            src={`https://infinitech-api6.site/images/${data.image}`}
           >
             <Image
               isZoomed
@@ -29,7 +29,7 @@ const AgentGallery: React.FC<AgentDataProps> = ({ agentdata }) => {
               className="bg-cover object-cover rounded-xl w-full"
               height={300}
               width={500} // Add a width to maintain aspect ratio
-              src={`https://infinitech-testing5.online/images/${data.image}`}
+              src={`https://infinitech-api6.site/images/${data.image}`}
             />
 
           </PhotoView>
