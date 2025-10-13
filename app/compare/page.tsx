@@ -6,7 +6,7 @@ import CompareLayout from "./comparelayout";
 
 async function fetchProperties(){
   const apiUrl =
-  process.env.NEXT_PUBLIC_API_URL || "https://infinitech-testing5.online";  const endpoint = `${apiUrl}/api/user/property`;
+  process.env.NEXT_PUBLIC_API_URL || "https://infinitech-api6.site";  const endpoint = `${apiUrl}/api/user/property`;
   const headers = getAuthHeaders();
 
   try {
