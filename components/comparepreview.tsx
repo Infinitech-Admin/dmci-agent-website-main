@@ -14,7 +14,7 @@ interface Property {
 }
 
 async function fetchProperties(): Promise<Property[]> {
-    const apiUrl = "https://infinitech-testing5.online";
+    const apiUrl = "https://infinitech-testing6.online";
     const endpoint = `${apiUrl}/api/user/property`;
 
     try {
