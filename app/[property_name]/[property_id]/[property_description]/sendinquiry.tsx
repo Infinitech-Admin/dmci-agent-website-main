@@ -49,7 +49,7 @@ const SendInquiry: React.FC<InquiryFormProps> = ({ inquiry }) => {
     const handleSubmit = async (values: any, { setSubmitting, resetForm }: any) => {
         try {
           await axios.post(
-            "https://infinitech-testing5.online/api/user/submit-inquiry",
+            "https://infinitech-api6.site/api/user/submit-inquiry",
             {
               first_name: values.first_name,
               last_name: values.last_name,
