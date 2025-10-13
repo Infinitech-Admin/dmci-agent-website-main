@@ -24,7 +24,7 @@ const ProfileCard: React.FC<any> = ({profile}) => {
         alt="Card background"
         className="object-cover object-top overflow-hidden rounded-xl w-full mb-4"
         height={450}
-        src={`https://infinitech-testing5.online/profiles/${profile.profile.image}`}
+        src={`https://infinitech-api6.site/profiles/${profile.profile.image}`}
         width={"auto"}
       />
       <h1 className="font-bold text-2xl">{profile.name}</h1>
