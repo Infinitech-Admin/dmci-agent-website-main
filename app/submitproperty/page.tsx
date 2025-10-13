@@ -26,7 +26,7 @@ export default function BlogPage() {
 
   useEffect(() => {
     const fetchTestimonials = async () => {
-      const apiUrl = "https://infinitech-testing5.online";
+      const apiUrl = "https://infinitech-api6.site";
       const endpoint = `${apiUrl}/api/user`;
 
       try {
