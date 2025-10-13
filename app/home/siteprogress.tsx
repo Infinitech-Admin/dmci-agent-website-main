@@ -29,7 +29,7 @@ const SiteProgress = () => {
   useEffect(() => {
     const fetchProperties = async () => {
       const apiUrl =
-      process.env.NEXT_PUBLIC_API_URL || "https://infinitech-testing5.online";      const headers = getAuthHeaders();
+      process.env.NEXT_PUBLIC_API_URL || "https://infinitech-api6.site";      const headers = getAuthHeaders();
 
       try {
         const response = await fetch(`${apiUrl}/api/user/properties`, {
