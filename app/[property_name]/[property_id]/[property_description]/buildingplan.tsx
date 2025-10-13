@@ -93,12 +93,12 @@ const BuildingPlanSection: React.FC<MasterPlanSectionProps> = ({
             {plan?.image ? (
               <div className="py-4 px-4">
                 <PhotoView
-                  src={`https://infinitech-testing5.online/properties/plans/${plan.image}`}
+                  src={`https://infinitech-api6.site/properties/plans/${plan.image}`}
                 >
                   <Image
                     alt="Master Plan Image"
                     className="rounded-lg w-full"
-                    src={`https://infinitech-testing5.online/properties/plans/${plan.image}`}
+                    src={`https://infinitech-api6.site/properties/plans/${plan.image}`}
                   />
                 </PhotoView>
               </div>
