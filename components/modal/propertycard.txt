@@ -97,8 +97,8 @@ const RecommendedCard: React.FC<RecommendedCardProps> = ({ data, type }) => {
             );
             if (Array.isArray(images) && images.length > 0) {
               imageUrl = isProperty
-                ? `https://infinitech-testing5.online/properties/images/${images[0]}`
-                : `https://infinitech-testing5.online/listings/${images[0]}`;
+                ? `https://infinitech-api6.site/properties/images/${images[0]}`
+                : `https://infinitech-api6.site/listings/${images[0]}`;
             }
           } catch (error) {
             console.error("Error parsing images:", error);
