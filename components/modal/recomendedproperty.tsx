@@ -98,7 +98,7 @@ const getOrdinalSuffix = (num: string | number) => {
           try {
             const images: string[] = JSON.parse(item.images);
             if (Array.isArray(images) && images.length > 0) {
-              imageUrl = `https://infinitech-testing5.online/properties/images/${images[0]}`;
+              imageUrl = `https://infinitech-api6.site/properties/images/${images[0]}`;
             }
           } catch (error) {
             console.error("Error parsing images:", error);
