@@ -26,7 +26,7 @@ const SingleNews = () => {
     const fetchNews = async () => {
       if (!id) return;
 
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "https://infinitech-testing5.online";
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "https://infinitech-api6.site";
       const headers = getAuthHeaders();
 
       try {
