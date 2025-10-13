@@ -69,7 +69,7 @@ const SiteProgressCard: React.FC<SiteProgressProps> = ({ data }) => {
           try {
             const images: string[] = JSON.parse(property.images || "[]");
             if (Array.isArray(images) && images.length > 0) {
-              imageUrl = `https://infinitech-testing5.online/properties/images/${images[0]}`;
+              imageUrl = `hhttps://infinitech-api6.site/properties/images/${images[0]}`;
             }
           } catch (error) {
             console.error("Error parsing images:", error);
