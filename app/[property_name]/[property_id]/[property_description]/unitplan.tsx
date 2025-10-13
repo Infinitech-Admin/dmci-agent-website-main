@@ -73,12 +73,12 @@ const MasterPlanSection: React.FC<MasterPlanSectionProps> = ({ data }) => {
                     <PhotoProvider>
                         {data?.property_plan_image ? (
                             <div className="py-4">
-                                <PhotoView src={`https://infinitech-testing5.online/properties/images/${data.property_plan_image}`}>
+                                <PhotoView src={`https://infinitech-api6.site/properties/images/${data.property_plan_image}`}>
                                     <Image
                                         alt="Master Plan Image"
                                         className="rounded-lg  w-full"
                                         src={data.property_plan_image
-                                            ? `https://infinitech-testing5.online/properties/images/${data.property_plan_image}`
+                                            ? `https://infinitech-api6.site/properties/images/${data.property_plan_image}`
                                             : "https://via.placeholder.com/600x400?text=No+Image+Available"}
                                     />
                                 </PhotoView>
