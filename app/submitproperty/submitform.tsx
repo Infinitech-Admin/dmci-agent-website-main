@@ -41,7 +41,7 @@ const SubmitForm = () => {
       const formData = new FormData();
 
       const apiUrl =
-        process.env.NEXT_PUBLIC_API_URL || "https://infinitech-testing5.online";
+        process.env.NEXT_PUBLIC_API_URL || "https://infinitech-api6.site";
       const endpoint = `${apiUrl}/api/user/submit-property`;
 
       Object.entries(values).forEach(([key, value]: [string, unknown]) => {
