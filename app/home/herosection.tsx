@@ -20,7 +20,7 @@ const HeroSection = () => {
 
       try {
         const response = await fetch(
-          "https://infinitech-testing5.online/api/user/featured-property",
+          "https://infinitech-api6.site/api/user/featured-property",
           {
             method: "GET",
             headers: headers,
@@ -59,7 +59,7 @@ const HeroSection = () => {
   try {
     const images: string[] = JSON.parse(property.images);
     if (Array.isArray(images) && images.length > 0) {
-      backgroundImage = `https://infinitech-testing5.online/properties/images/${images[0]}`;
+      backgroundImage = `https://infinitech-api6.site/properties/images/${images[0]}`;
     }
   } catch (error) {
     console.error("Error parsing images:", error);
