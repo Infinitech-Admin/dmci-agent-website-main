@@ -18,11 +18,11 @@ export async function generateMetadata({ params }: { params: paramsTypes }) {
         openGraph: {
             title: `${formattedName} | ABIC Realty and Consultancy Corporation`,
             description: property_description || "Default description",
-            url: `https://infinitech-testing5.online/property/${property_id}`,
+            url: `https://infinitech-api6.site/property/${property_id}`,
             siteName: "ABIC Realty",
             images: [
                 {
-                    url: "https://infinitech-testing5.online/media/abic-realty-loan-calculator-banner.png",
+                    url: "https://infinitech-api6.site/media/abic-realty-loan-calculator-banner.png",
                     width: 1200,
                     height: 630,
                     alt: "ABIC Realty Property",
@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: { params: paramsTypes }) {
             title: `Property: ${formattedName} | ABIC Realty`,
             description: property_description || "Default description",
             images: [
-                "https://infinitech-testing5.online/media/abic-realty-loan-calculator-banner.png",
+                "https://infinitech-api6.site/media/abic-realty-loan-calculator-banner.png",
             ],
         },
         other: {
