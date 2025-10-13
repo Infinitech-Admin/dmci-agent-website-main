@@ -15,7 +15,7 @@ const Chatbot = () => {
   ];
   const [properties, setProperties] = useState<any[]>([]);
   const apiUrl =
-    process.env.NEXT_PUBLIC_API_URL || "https://infinitech-testing5.online";
+    process.env.NEXT_PUBLIC_API_URL || "https://infinitech-api6.site";
   const headers = getAuthHeaders();
   const endpoint = `${apiUrl}/api/user/properties`;
 
