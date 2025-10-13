@@ -46,7 +46,7 @@ const NewsBlogs: React.FC<NewsBlogsDataProps> = ({ articles }) => {
                     className="object-cover rounded-xl w-full min-h-32 md:h-48 aspect-w-16"
                     src={
                       newsItem.image
-                        ? `https://infinitech-testing5.online/articles/${newsItem.image}`
+                        ? `https://infinitech-api6.site/articles/${newsItem.image}`
                         : defaultImage
                     }
                     width={1000}
