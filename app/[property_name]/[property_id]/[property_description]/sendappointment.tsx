@@ -57,7 +57,7 @@ const SendAppointment: React.FC<InquiryFormProps> = ({ inquiry }) => {
     const handleAppointmentSubmit = async (values: any, { resetForm }: any) => {
         try {
           await axios.post(
-            "https://infinitech-testing5.online/api/user/request-viewing",
+            "https://infinitech-api6.site/api/user/request-viewing",
             values,
             {
               headers: {
