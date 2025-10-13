@@ -65,7 +65,7 @@ const ContractSigning: React.FC<TestimonialProps> = ({ data }) => {
                                 removeWrapper
                                 alt="Card background"
                                 className="z-0 w-full object-top"
-                                src={`https://infinitech-testing5.online/contracts/${testimonial.image}`}
+                                src={`https://infinitech-api6.site/contracts/${testimonial.image}`}
                                 height={400}
                                 width={150}
                             />
