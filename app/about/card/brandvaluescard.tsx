@@ -8,45 +8,45 @@ const BrandValuesCard = () => {
       key: 1,
       title: "Modern City in Living",
       image:
-        "https://dmcicorporation.com/assets/img/brand-values-modern-city.jpg",
+        "https://infinitech-api6.site/assets/img/brand-values-modern-city.jpg",
     },
 
     {
       key: 2,
       title: "Medium Density development",
       image:
-        "https://dmcicorporation.com/assets/img/brand-values-medium-density.jpg",
+        "https://infinitech-api6.site/assets/img/brand-values-medium-density.jpg",
     },
 
     {
       key: 3,
       title: "Resort Living",
-      image: "https://dmcicorporation.com/assets/img/Resort%20Living.jpg",
+      image: "https://infinitech-api6.site/assets/img/Resort%20Living.jpg",
     },
     {
       key: 4,
       title: "themes development",
       image:
-        "https://dmcicorporation.com/assets/img/brand-values-themed-development.jpg",
+        "https://infinitech-api6.site/assets/img/brand-values-themed-development.jpg",
     },
     {
       key: 5,
       title: "quality workmanship",
       image:
-        "https://dmcicorporation.com/assets/img/brand-values-quality-workmanship.jpg",
+        "https://infinitech-api6.site/assets/img/brand-values-quality-workmanship.jpg",
     },
 
     {
       key: 6,
       title: "ready for occupancy",
       image:
-        "https://dmcicorporation.com/assets/img/Ready%20for%20occupancy.jpg",
+        "https://infinitech-api6.site/assets/img/Ready%20for%20occupancy.jpg",
     },
 
     {
       key: 7,
       title: "worry-free living",
-      image: "https://dmcicorporation.com/assets/img/Worry-free%20lving.jpg",
+      image: "https://infinitech-api6.site/assets/img/Worry-free%20lving.jpg",
     },
   ];
 
