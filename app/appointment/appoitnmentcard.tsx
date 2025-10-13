@@ -95,7 +95,7 @@ const AppointmentCard = () => {
   ) => {
     try {
       const response = await axios.post(
-        "https://infinitech-testing5.online/api/user/request-viewing",
+        "https://infinitech-api6.site/api/user/request-viewing",
         values,
         {
           headers: {
