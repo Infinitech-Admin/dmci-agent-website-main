@@ -40,7 +40,7 @@ export const InquiryNotificationEmail = ({
         <Img
           alt="DMCI Homes Logo"
           height="170"
-          src="https://infinitech-testing5.online/logo/dmci-logo-only.png"
+          src="https://infinitech-api6.site/logo/dmci-logo-only.png"
           style={logo}
         />
         <Heading style={h1}>New Inquiry Notification</Heading>
