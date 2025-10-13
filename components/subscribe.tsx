@@ -20,7 +20,7 @@ const SubscribeForm = () => {
 
     try {
       const response = await axios.post(
-        "https://infinitech-testing5.online/api/user/subscribe",
+        "https://infinitech-api6.site/api/user/subscribe",
         { email },
         {
           headers: {
