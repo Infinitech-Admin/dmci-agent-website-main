@@ -50,7 +50,7 @@ const MainSection: React.FC<MainSectionProps> = ({ data }) => {
             fade ? "opacity-100" : "opacity-0"
           }`}
           style={{
-            backgroundImage: `url('https://infinitech-testing5.online/properties/images/${images[currentIndex]}')`,
+            backgroundImage: `url('https://infinitech-api6.site/properties/images/${images[currentIndex]}')`,
           }}
         />
 
@@ -62,7 +62,7 @@ const MainSection: React.FC<MainSectionProps> = ({ data }) => {
             <Image
               alt="data logo"
               className="py-8 mx-auto md:mx-0 text-center"
-              src={`https://infinitech-testing5.online/properties/logos/${data.logo}`}
+              src={`https://infinitech-api6.site/properties/logos/${data.logo}`}
               width={200}
             />
           </div>
