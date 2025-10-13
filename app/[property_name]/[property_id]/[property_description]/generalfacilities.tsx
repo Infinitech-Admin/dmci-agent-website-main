@@ -28,13 +28,13 @@ const GeneralFacilities: React.FC<GeneralFacilitiesProps> = ({ data }) => {
                         {data.map((facility, index) => (
                             <PhotoView
                                 key={index}
-                                src={`https://infinitech-testing5.online/properties/facilities/${facility.image}`}
+                                src={`https://infinitech-api6.site/properties/facilities/${facility.image}`}
                             >
                                 <div className="relative cursor-pointer">
                                     <Image
                                         alt={facility.name}
                                         className="w-full h-[120px] object-cover overflow-hidden rounded-lg"
-                                        src={`https://infinitech-testing5.online/properties/facilities/${facility.image}`}
+                                        src={`https://infinitech-api6.site/properties/facilities/${facility.image}`}
                                         width={1000}
                                     />
                                     <div className="absolute z-20 inset-0 bg-black bg-opacity-50 flex items-center justify-center text-center text-white font-semibold capitalize text-sm rounded-lg">
