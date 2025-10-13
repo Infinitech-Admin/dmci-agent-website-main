@@ -7,7 +7,7 @@ export default function ListingsLayout({
     <>
       <div className="flex flex-col items-center inset-0 justify-center w-full h-48 bg-cover bg-center bg-no-repeat py-8"
         style={{
-          backgroundImage: `url('https://infinitech-testing5.online/media/hero-shd.webp')`,
+          backgroundImage: `url('https://infinitech-api6.site/media/hero-shd.webp')`,
         }}>
         <h1 className="uppercase text-4xl font-bold">listings</h1>
       </div>
