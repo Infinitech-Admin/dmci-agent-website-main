@@ -156,13 +156,15 @@ const AgentContactInfo: React.FC<AgentDataProps> = ({ data }) => {
         {/* ✅ Save Contact Button - under Instagram, right aligned */}
         <div className="flex justify-end mt-3">
           <Button
-            size="sm"
-            color="primary"
-            variant="flat"
-            onPress={handleSaveContact}
-          >
-            Save Contact
-          </Button>
+  size="sm"
+  color="primary"
+  variant="bordered"
+  className="font-semibold text-blue-600 border-blue-600 hover:bg-blue-600 hover:text-white"
+  onPress={handleSaveContact}
+>
+  Save Contact
+</Button>
+
         </div>
       </div>
     </div>
