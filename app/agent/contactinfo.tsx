@@ -1,18 +1,16 @@
-import { Divider, Link } from "@heroui/react";
+import { Divider, Link, Button } from "@heroui/react";
 import React from "react";
 import { FaSquareInstagram, FaTelegram, FaViber, FaWhatsapp } from "react-icons/fa6";
 import { MdEmail, MdFacebook, MdPhone } from "react-icons/md";
 
 interface AgentData {
   email: string;
-
   profile: {
     facebook: string;
     instagram: string;
     phone: string;
-  }
+  };
 }
-
 
 interface AgentDataProps {
   data: AgentData;
@@ -24,12 +22,22 @@ const AgentContactInfo: React.FC<AgentDataProps> = ({ data }) => {
     return phone.replace(/(\d{4})(\d{3})(\d{3})/, "$1 $2 $3");
   };
 
+  const handleSaveContact = () => {
+    // You can replace this link with your actual vCard (.vcf) file
+    const vcfUrl = "/contacts/ella-sarmiento.vcf";
+    const link = document.createElement("a");
+    link.href = vcfUrl;
+    link.download = "EllaSarmiento.vcf";
+    link.click();
+  };
+
   return (
     <div className="flex flex-col mb-4">
       {/* Contact Info */}
       <div>
         <h2 className="text-sm font-semibold mb-2">Contact Info</h2>
 
+        {/* Email */}
         <div className="flex items-center gap-2 text-sm mb-2">
           <div className="bg-blue-100 p-1 rounded-lg shrink-0">
             <MdEmail className="text-blue-700" size={18} />
@@ -45,8 +53,7 @@ const AgentContactInfo: React.FC<AgentDataProps> = ({ data }) => {
           </div>
         </div>
 
-
-
+        {/* Phone */}
         <div className="flex items-center gap-2 text-sm mb-2">
           <div className="bg-blue-100 py-1 px-1 rounded-lg">
             <MdPhone className="text-blue-700" size={18} />
@@ -56,15 +63,15 @@ const AgentContactInfo: React.FC<AgentDataProps> = ({ data }) => {
             className="text-blue-200 hover:underline"
             href={`tel:+63${data.profile.phone}`}
           >
-           (+63) {formatPhoneNumber(data.profile.phone)}
+            (+63) {formatPhoneNumber(data.profile.phone)}
           </a>
         </div>
 
+        {/* Telegram */}
         <div className="flex items-center gap-2 text-sm mb-2">
           <div className="bg-blue-100 py-1 px-1 rounded-lg">
             <FaTelegram className="text-blue-700" size={18} />
           </div>
-
           <span>:</span>
           <a
             className="text-blue-200 hover:underline"
@@ -72,15 +79,15 @@ const AgentContactInfo: React.FC<AgentDataProps> = ({ data }) => {
             target="_blank"
             rel="noopener noreferrer"
           >
-              Ella Sarmiento
+            Ella Sarmiento
           </a>
         </div>
 
+        {/* Viber */}
         <div className="flex items-center gap-2 text-sm mb-2">
           <div className="bg-blue-100 py-1 px-1 rounded-lg">
             <FaViber className="text-blue-700" size={18} />
           </div>
-
           <span>:</span>
           <a
             className="text-blue-200 hover:underline"
@@ -92,11 +99,11 @@ const AgentContactInfo: React.FC<AgentDataProps> = ({ data }) => {
           </a>
         </div>
 
+        {/* WhatsApp */}
         <div className="flex items-center gap-2 text-sm mb-2">
           <div className="bg-blue-100 py-1 px-1 rounded-lg">
             <FaWhatsapp className="text-blue-700" size={18} />
           </div>
-
           <span>:</span>
           <a
             className="text-blue-200 hover:underline"
@@ -104,7 +111,7 @@ const AgentContactInfo: React.FC<AgentDataProps> = ({ data }) => {
             target="_blank"
             rel="noopener noreferrer"
           >
-             Ella Sarmiento
+            Ella Sarmiento
           </a>
         </div>
       </div>
@@ -112,15 +119,15 @@ const AgentContactInfo: React.FC<AgentDataProps> = ({ data }) => {
       <Divider className="my-4" />
 
       {/* Social Links */}
-      <div className="mb-6">
+      <div className="mb-6 relative">
         <h2 className="text-sm font-semibold mb-2">Social Links</h2>
         <ul className="space-y-2">
-          <li className="flex items-center gap-2">
+          {/* Facebook */}
+          <li className="flex items-center gap-2 text-sm">
             <div className="bg-blue-100 py-1 px-1 rounded-lg">
               <MdFacebook className="text-blue-700" size={18} />
             </div>
-
-            {":"}
+            <span>:</span>
             <Link
               className="text-blue-200 text-tiny break-words line-clamp-1 hover:underline"
               href={data.profile.facebook}
@@ -129,12 +136,13 @@ const AgentContactInfo: React.FC<AgentDataProps> = ({ data }) => {
               Sonora Garden Residences - DMCI Homes by Ella Sarmiento
             </Link>
           </li>
+
+          {/* Instagram */}
           <li className="flex items-center gap-2 text-sm">
             <div className="bg-blue-100 py-1 px-1 rounded-lg">
               <FaSquareInstagram className="text-blue-700" size={18} />
             </div>
-
-            {":"}
+            <span>:</span>
             <Link
               className="text-blue-200 text-tiny break-words line-clamp-1 hover:underline"
               href={data.profile.instagram}
@@ -144,6 +152,18 @@ const AgentContactInfo: React.FC<AgentDataProps> = ({ data }) => {
             </Link>
           </li>
         </ul>
+
+        {/* ✅ Save Contact Button - under Instagram, right aligned */}
+        <div className="flex justify-end mt-3">
+          <Button
+            size="sm"
+            color="primary"
+            variant="flat"
+            onPress={handleSaveContact}
+          >
+            Save Contact
+          </Button>
+        </div>
       </div>
     </div>
   );
