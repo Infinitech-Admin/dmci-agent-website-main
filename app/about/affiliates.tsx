@@ -5,10 +5,10 @@ import AffiliatesImage from "./affiliatesimage";
 const Affiliates = () => {
   return (
     //section
-    <section className="flex flex-col gap-4 py-6 md:py-8">
+    <section className="flex flex-col gap-4 px-4 py-6 sm:px-6 md:py-8 lg:px-8">
       <div className="text-start">
-        <h1 className="font-bold text-3xl">Our Affiliates</h1>
-        <h2>
+        <h1 className="font-bold text-2xl sm:text-3xl">Our Affiliates</h1>
+        <h2 className="text-sm sm:text-base font-normal">
           DMCI Holdings Inc. along with its subsidiaries has conquered the test
           of time and are always dedicated in providing only the best to the
           communities it serves.

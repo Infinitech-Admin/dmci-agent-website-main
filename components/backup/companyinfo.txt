@@ -67,7 +67,7 @@ const CompanyInfo = () => {
           </p> */}
           <p className="text-sm">
             {/* <strong className="text-default-500">Sales:</strong> */}
-            <a href="mailto:sales@dmcihomes.com">infinitechcorp.ph@gmail.com</a>
+            <a href="mailto:sales@dmcihomes.com">sales@dmcihomes.com</a>
           </p>
           {/* <p className="text-sm">
             <strong className="text-default-500">Leasing:</strong>

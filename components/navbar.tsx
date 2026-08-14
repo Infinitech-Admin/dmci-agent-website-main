@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import {
   Navbar as NextUINavbar,
   NavbarContent,
@@ -30,7 +30,7 @@ import FormUtilities from "./navbar/formsutilities";
 import { LuDownload } from "react-icons/lu";
 
 export const Navbar = () => {
-  const pathname = typeof window !== "undefined" ? usePathname() : "";
+  const pathname = usePathname();
   const router = useRouter();
   const [menuOpen, setMenuOpen] = useState(false);
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -56,7 +56,10 @@ export const Navbar = () => {
     window.addEventListener("appinstalled", handleAppInstalled);
 
     return () => {
-      window.removeEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
+      window.removeEventListener(
+        "beforeinstallprompt",
+        handleBeforeInstallPrompt,
+      );
       window.removeEventListener("appinstalled", handleAppInstalled);
     };
   }, []);
@@ -103,7 +106,10 @@ export const Navbar = () => {
         {/* Brand */}
         <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
           <NavbarBrand as="li" className="gap-3">
-            <NextLink className="flex justify-between items-center gap-1" href="/">
+            <NextLink
+              className="flex justify-between items-center gap-1"
+              href="/"
+            >
               <BrandLogo />
               <p className="font-bold text-2xl">DMCI HOMES</p>
             </NextLink>
@@ -119,7 +125,7 @@ export const Navbar = () => {
                   <NextLink
                     className={clsx(
                       "w-full text-left uppercase",
-                      pathname === item.href ? "text-green-500 font-bold" : ""
+                      pathname === item.href ? "text-green-500 font-bold" : "",
                     )}
                     href={item.href}
                   >
@@ -132,29 +138,30 @@ export const Navbar = () => {
         </NavbarContent>
 
         {/* Desktop Right Section */}
-          <NavbarContent className="hidden xl:flex basis-1/5 sm:basis-full" justify="end">
-            <NavbarItem className="flex items-center gap-3">
-              {/* Customer Reservation Form */}
-              <FormUtilities />
+        <NavbarContent
+          className="hidden xl:flex basis-1/5 sm:basis-full"
+          justify="end"
+        >
+          <NavbarItem className="flex items-center gap-3">
+            {/* Customer Reservation Form */}
+            <FormUtilities />
 
-              {/* ✅ Install App aligned with icons */}
-              {showInstallButton && (
-                <Button
-                  onPress={handleInstallApp}
-                  isIconOnly
-                  className="bg-green-600 text-white rounded-full p-2 hover:bg-green-700"
-                  aria-label="Install App"
-                >
-                  <LuDownload size={20} />
-                </Button>
-              )}
+            {/* ✅ Install App aligned with icons */}
+            {showInstallButton && (
+              <Button
+                onPress={handleInstallApp}
+                isIconOnly
+                className="bg-green-600 text-white rounded-full p-2 hover:bg-green-700"
+                aria-label="Install App"
+              >
+                <LuDownload size={20} />
+              </Button>
+            )}
 
-              {/* Theme Switch (last sa kanan) */}
-              <ThemeSwitch />
-            </NavbarItem>
-          </NavbarContent>
-
-
+            {/* Theme Switch (last sa kanan) */}
+            <ThemeSwitch />
+          </NavbarItem>
+        </NavbarContent>
 
         {/* Mobile Navbar */}
         <NavbarContent className="xl:hidden basis-1 pl-4" justify="end">
@@ -170,7 +177,7 @@ export const Navbar = () => {
                 <button
                   className={clsx(
                     "w-full text-left",
-                    pathname === item.href ? "text-blue-500 font-bold" : ""
+                    pathname === item.href ? "text-blue-500 font-bold" : "",
                   )}
                   onClick={() => handleLinkClick(item.href)}
                 >
@@ -192,7 +199,7 @@ export const Navbar = () => {
                     download
                     className={clsx(
                       "w-full text-left block",
-                      pathname === item.href ? "text-blue-500 font-bold" : ""
+                      pathname === item.href ? "text-blue-500 font-bold" : "",
                     )}
                     href={item.href}
                   >
@@ -202,7 +209,7 @@ export const Navbar = () => {
                   <button
                     className={clsx(
                       "w-full text-left",
-                      pathname === item.href ? "text-blue-500 font-bold" : ""
+                      pathname === item.href ? "text-blue-500 font-bold" : "",
                     )}
                     onClick={() => handleLinkClick(item.href)}
                   >
