@@ -8,7 +8,7 @@ const CertificateCard = () => {
       key: 1,
       title: "Quadruple A Contractor",
       image:
-        "https://infinitech-api2.site/assets/quadruple-a-contractor-66c6a0b70243b.webp",
+        "https://www.dmcihomes.com/uploads/media/quadruple-a-contractor-66c6a0b70243b.webp",
       description:
         "The notice on DMCI Homes' upgraded category was released on January 18, 2017 by Philippine Contractors Accreditation Board (PCAB). The AAAA license given to DMCI Homes is currently the highest given to firms that satisfy the institution's requirements.",
     },
