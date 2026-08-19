@@ -85,10 +85,10 @@ const SiteProgressCard: React.FC<SiteProgressProps> = ({ data }) => {
                         property.status === "Ready For Occupancy"
                           ? "bg-green-100 text-green-800"
                           : property.status === "Under Construction"
-                          ? "bg-red-100 text-red-800"
-                          : property.status === "New"
-                          ? "bg-yellow-100 text-yellow-700"
-                          : "bg-gray-100 text-gray-600"
+                            ? "bg-red-100 text-red-800"
+                            : property.status === "New"
+                              ? "bg-yellow-100 text-yellow-700"
+                              : "bg-gray-100 text-gray-600"
                       }`}
                     >
                       {property.status}
@@ -101,13 +101,13 @@ const SiteProgressCard: React.FC<SiteProgressProps> = ({ data }) => {
                   className="z-0 w-full h-full scale-125 -translate-y-6 object-cover"
                   src={imageUrl}
                 />
-             <CardFooter className="absolute bg-white/20 bottom-0 border-t-1 border-zinc-100/50 z-10 justify-between h-[80px] px-4">
-             <div className="overflow-hidden">
-              <p className="text-white font-bold text-md truncate">
-                {property.name}
-              </p>
-              <PropertyLocation location={property.property_location} />
-              </div>
+                <CardFooter className="absolute bg-white/20 bottom-0 border-t-1 border-zinc-100/50 z-10 justify-between h-[80px] px-4">
+                  <div className="overflow-hidden">
+                    <p className="text-white font-bold text-md truncate">
+                      {property.name}
+                    </p>
+                    <PropertyLocation location={property.property_location} />
+                  </div>
                 </CardFooter>
                 <div
                   className="flex flex-col items-center justify-center bg-green-500 absolute bottom-0 z-9 w-full opacity-50"

@@ -22,15 +22,34 @@ const unitType = [
   { key: 8, value: "2 Bedroom w/ Parking", label: "2 Bedroom w/ Parking" },
   { key: 9, value: "3 Bedroom w/ Parking", label: "3 Bedroom w/ Parking" },
   { key: 10, value: "Tandem Unit w/ Parking", label: "Tandem Unit w/ Parking" },
-  { key: 11, value: "Studio w/ Tandem Parking", label: "Studio w/ Tandem Parking" },
-  { key: 12, value: "1 Bedroom w/ Tandem Parking", label: "1 Bedroom w/ Tandem Parking" },
-  { key: 13, value: "2 Bedroom w/ Tandem Parking", label: "2 Bedroom w/ Tandem Parking" },
-  { key: 14, value: "3 Bedroom w/ Tandem Parking", label: "3 Bedroom w/ Tandem Parking" },
-  { key: 15, value: "Tandem Unit w/ Tandem Parking", label: "Tandem Unit w/ Tandem Parking" },
+  {
+    key: 11,
+    value: "Studio w/ Tandem Parking",
+    label: "Studio w/ Tandem Parking",
+  },
+  {
+    key: 12,
+    value: "1 Bedroom w/ Tandem Parking",
+    label: "1 Bedroom w/ Tandem Parking",
+  },
+  {
+    key: 13,
+    value: "2 Bedroom w/ Tandem Parking",
+    label: "2 Bedroom w/ Tandem Parking",
+  },
+  {
+    key: 14,
+    value: "3 Bedroom w/ Tandem Parking",
+    label: "3 Bedroom w/ Tandem Parking",
+  },
+  {
+    key: 15,
+    value: "Tandem Unit w/ Tandem Parking",
+    label: "Tandem Unit w/ Tandem Parking",
+  },
   { key: 16, value: "1 Parking Slot", label: "1 Parking Slot" },
   { key: 17, value: "Tandem Parking", label: "Tandem Parking" },
 ];
-
 
 // Validation schema using Yup
 const validationSchema = Yup.object().shape({
@@ -54,9 +73,9 @@ const validationSchema = Yup.object().shape({
 interface Property {
   id: string;
   name: string;
-  property:{
+  property: {
     name: string;
-  }
+  };
 }
 
 interface PropertyProps {
@@ -77,7 +96,7 @@ const ContactForm: React.FC<PropertyProps> = ({ data }) => {
 
   const handleSubmit = async (
     values: typeof initialValues,
-    { resetForm }: any
+    { resetForm }: any,
   ) => {
     try {
       // Sending inquiry to the API
@@ -89,7 +108,7 @@ const ContactForm: React.FC<PropertyProps> = ({ data }) => {
             "User-ID": process.env.NEXT_PUBLIC_API_USER_ID,
             Accept: "application/json",
           },
-        }
+        },
       );
 
       // Sending email notification for viewing request - agent
@@ -110,7 +129,7 @@ const ContactForm: React.FC<PropertyProps> = ({ data }) => {
             "User-ID": process.env.NEXT_PUBLIC_API_USER_ID,
             Accept: "application/json",
           },
-        }
+        },
       );
 
       if (contactResponse?.data && emailAgentResponse?.data) {
@@ -233,33 +252,33 @@ const ContactForm: React.FC<PropertyProps> = ({ data }) => {
 
               {/* Property Name */}
               <div className="col-span-2 md:col-span-1">
-            <Select
-              label="Property"
-              labelPlacement="inside"
-              placeholder="Select Property"
-              selectedKeys={values.property_name ? [values.property_name] : []}
-
-              onSelectionChange={(selected) => {
-                const value = Array.from(selected)[0] || "";
-                setFieldValue("property_name", value);
-              }}
-              
-            >
-              {data
-                .sort((a, b) => a.name.localeCompare(b.name)) // Sort alphabetically
-                .map((property) => (
-                  <SelectItem key={property.name} textValue={property.name}>
-                    {property.name}
-                  </SelectItem>
-                ))}
-            </Select>
-            <ErrorMessage
-              className="text-red-500 text-tiny"
-              component="div"
-              name="property_name"
-            />
-          </div>
-
+                <Select
+                  label="Property"
+                  labelPlacement="inside"
+                  placeholder="Select Property"
+                  selectedKeys={
+                    values.property_name ? [values.property_name] : []
+                  }
+                  onSelectionChange={(selected) => {
+                    const value = Array.from(selected)[0] || "";
+                    setFieldValue("property_name", value);
+                  }}
+                >
+                  {data
+                    .filter((property) => property && property.name)
+                    .sort((a, b) => a.name.localeCompare(b.name))
+                    .map((property) => (
+                      <SelectItem key={property.name} textValue={property.name}>
+                        {property.name}
+                      </SelectItem>
+                    ))}
+                </Select>
+                <ErrorMessage
+                  className="text-red-500 text-tiny"
+                  component="div"
+                  name="property_name"
+                />
+              </div>
 
               {/* Unit Type */}
               <div className="col-span-2 md:col-span-1">
@@ -270,7 +289,6 @@ const ContactForm: React.FC<PropertyProps> = ({ data }) => {
                   selectedKeys={
                     values.unit_type ? new Set([values.unit_type]) : new Set()
                   }
-                  
                   onSelectionChange={(keys) => {
                     const selected = Array.from(keys)[0] || "";
                     setFieldValue("unit_type", selected);

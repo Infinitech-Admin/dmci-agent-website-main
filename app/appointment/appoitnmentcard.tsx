@@ -40,7 +40,7 @@ const validationSchema = Yup.object().shape({
 
   agreement: Yup.boolean().oneOf(
     [true],
-    "You must accept the terms and conditions."
+    "You must accept the terms and conditions.",
   ),
 
   message: Yup.string().required("Message is required"),
@@ -61,7 +61,7 @@ const AppointmentCard = () => {
 
         if (!response.ok) {
           throw new Error(
-            `Failed to fetch testimonials: ${response.status} - ${response.statusText}`
+            `Failed to fetch testimonials: ${response.status} - ${response.statusText}`,
           );
         }
 
@@ -91,7 +91,7 @@ const AppointmentCard = () => {
 
   const handleSubmit = async (
     values: typeof initialValues,
-    { resetForm }: any
+    { resetForm }: any,
   ) => {
     try {
       const response = await axios.post(
@@ -102,7 +102,7 @@ const AppointmentCard = () => {
             "User-ID": process.env.NEXT_PUBLIC_API_USER_ID,
             "Content-Type": "multipart/form-data",
           },
-        }
+        },
       );
 
       if (response?.data) {
@@ -179,14 +179,14 @@ const AppointmentCard = () => {
                   <div>
                     <Field name="type">
                       {({ field }: any) => (
-                      <Select
-                      label="Appointment For"
-                      selectedKeys={field.value ? [field.value] : []}
-                      onSelectionChange={(keys) => {
-                        const selected = Array.from(keys)[0] || "";
-                        setFieldValue("type", selected);
-                      }}
-                    >                    
+                        <Select
+                          label="Appointment For"
+                          selectedKeys={field.value ? [field.value] : []}
+                          onSelectionChange={(keys) => {
+                            const selected = Array.from(keys)[0] || "";
+                            setFieldValue("type", selected);
+                          }}
+                        >
                           {viewing.map((option, index) => (
                             <SelectItem key={option.label} value={option.label}>
                               {option.label}
@@ -204,34 +204,33 @@ const AppointmentCard = () => {
 
                   {/* Property Name */}
                   <div>
-                  <Field name="properties">
-                    {({ field }: any) => (
-                     <Select
-                     label="Property"
-                     selectedKeys={field.value ? [field.value] : []}
-                     onSelectionChange={(keys) => {
-                       const selected = Array.from(keys)[0] || "";
-                       setFieldValue("properties", selected);
-                     }}
-                   >
-                   
-                        {properties
-                          .sort((a, b) => a.name.localeCompare(b.name)) // Sort alphabetically
-                          .map((option) => (
-                            <SelectItem key={option.name}>
-                              {option.name}
-                            </SelectItem>
-                          ))}
-                      </Select>
-                    )}
-                  </Field>
-                  <ErrorMessage
-                    className="text-red-500 text-sm"
-                    component="div"
-                    name="properties"
-                  />
-                </div>
-
+                    <Field name="properties">
+                      {({ field }: any) => (
+                        <Select
+                          label="Property"
+                          selectedKeys={field.value ? [field.value] : []}
+                          onSelectionChange={(keys) => {
+                            const selected = Array.from(keys)[0] || "";
+                            setFieldValue("properties", selected);
+                          }}
+                        >
+                          {properties
+                            .filter((option) => option && option.name) // remove null/undefined entries or missing names
+                            .sort((a, b) => a.name.localeCompare(b.name))
+                            .map((option) => (
+                              <SelectItem key={option.name}>
+                                {option.name}
+                              </SelectItem>
+                            ))}
+                        </Select>
+                      )}
+                    </Field>
+                    <ErrorMessage
+                      className="text-red-500 text-sm"
+                      component="div"
+                      name="properties"
+                    />
+                  </div>
                 </div>
                 <Divider className="my-4" />
 
@@ -331,11 +330,10 @@ const AppointmentCard = () => {
                             id="agreement"
                           />
                           <span className="text-sm text-default-500">
-                          By submitting your appointment request, 
-                          you agree that the information provided 
-                          will be used solely for the purpose of 
-                          scheduling and managing your appointment, 
-                          as well as related communications.
+                            By submitting your appointment request, you agree
+                            that the information provided will be used solely
+                            for the purpose of scheduling and managing your
+                            appointment, as well as related communications.
                           </span>
                         </label>
                       )}
@@ -364,17 +362,16 @@ const AppointmentCard = () => {
                   </Button>
 
                   <Button
-  size="lg"
-  color="primary"
-  disabled={isSubmitting}
-  type="submit"
-  className="min-w-0 truncate text-sm sm:text-base"
->
-  {isSubmitting
-    ? "Submitting Appointment..."
-    : "Submit Appointment"}
-</Button>
-
+                    size="lg"
+                    color="primary"
+                    disabled={isSubmitting}
+                    type="submit"
+                    className="min-w-0 truncate text-sm sm:text-base"
+                  >
+                    {isSubmitting
+                      ? "Submitting Appointment..."
+                      : "Submit Appointment"}
+                  </Button>
                 </div>
               </Form>
             </CardBody>

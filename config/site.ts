@@ -1,8 +1,15 @@
 export type SiteConfig = typeof siteConfig;
 
+type NavMenuLink = {
+  label: string;
+  href: string;
+  download?: boolean;
+};
+
 export const siteConfig = {
   name: "DMCI Homes | Real Estate Philippines",
-  description: "Welcome to DMCI Homes' official website. Explore prime house and lots, real estate properties, and condos for sale in the Philippines. Learn more today!",
+  description:
+    "Welcome to DMCI Homes' official website. Explore prime house and lots, real estate properties, and condos for sale in the Philippines. Learn more today!",
   navItems: [
     {
       label: "Home",
@@ -12,7 +19,7 @@ export const siteConfig = {
       label: "About Us",
       href: "/about",
     },
-    
+
     {
       label: "Properties",
       href: "/properties",
@@ -58,7 +65,7 @@ export const siteConfig = {
       label: "Customer Reservation Form",
       href: "http://apps.dmcihomes.com/OnlineCRF/Main?ac=EL25650",
     },
-  
+
     {
       label: "Set Appointment",
       href: "/appointment",
@@ -71,15 +78,13 @@ export const siteConfig = {
       label: "Loan Calculator",
       href: "/calculator",
     },
-    
-    
+
     {
       label: "Apply Now",
-      href: "/career  ",
+      href: "/career",
     },
+  ] as NavMenuLink[],
 
-
-  ],
   links: {
     // submitproperty: "/submitproperty",
     crf: "http://apps.dmcihomes.com/OnlineCRF/Main?ac=EL25650",
