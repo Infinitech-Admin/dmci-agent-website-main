@@ -10,7 +10,6 @@ import FilterPropertyModal from "@/components/modal/fileterproperty";
 import ComparePreview from "@/components/comparepreview";
 import { LuSearch } from "react-icons/lu";
 
-
 interface Property {
   id: string;
   property_location: string;
@@ -23,9 +22,8 @@ interface Property {
   property_level: string;
   property: {
     name: string;
-    location:string;
-  }
-
+    location: string;
+  };
 }
 
 const priceRanges = [
@@ -42,8 +40,7 @@ const priceRanges = [
   { key: "10M+", value: "10000000-100000000" },
 ];
 
-
-async function fetchProperties()  {
+async function fetchProperties() {
   const apiUrl = process.env.NEXT_PUBLIC_API_URL;
   const endpoint = `${apiUrl}/api/user/property`;
 
@@ -79,8 +76,15 @@ const HomePage = () => {
   useEffect(() => {
     async function loadProperties() {
       const data = await fetchProperties();
-      setProperties(data);
-      setFilteredProperties(data);
+      // Guard at the source: drop any record missing a valid nested `property`
+      // object before it ever reaches state. This is what stops the
+      // "Cannot read properties of null (reading 'name')" crash downstream,
+      // in both this component's filter and RecommendedCard's sort.
+      const safeData = (data ?? []).filter(
+        (item: Property) => item && item.property && item.property.name,
+      );
+      setProperties(safeData);
+      setFilteredProperties(safeData);
       setLoading(false);
     }
 
@@ -88,31 +92,37 @@ const HomePage = () => {
   }, []);
 
   useEffect(() => {
-    let filtered = properties.filter((property) =>
-      property.property.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    property.property_location
-    .toLowerCase().includes(searchTerm.toLowerCase()) ||
-      property.property_type.toLowerCase().includes(searchTerm.toLowerCase())
-    );
+    const term = searchTerm.toLowerCase();
+
+    let filtered = properties.filter((property) => {
+      if (!property || !property.property || !property.property.name) {
+        return false;
+      }
+
+      return (
+        property.property.name.toLowerCase().includes(term) ||
+        (property.property_location || "").toLowerCase().includes(term) ||
+        (property.property_type || "").toLowerCase().includes(term)
+      );
+    });
 
     if (selectedPriceRange && selectedPriceRange !== "All") {
       const [minPrice, maxPrice] = selectedPriceRange.split("-").map(Number);
       filtered = filtered.filter(
         (property) =>
-          property.property_price >= minPrice && property.property_price <= maxPrice
+          property.property_price >= minPrice &&
+          property.property_price <= maxPrice,
       );
     }
 
     if (selectedPriceRange === "All") {
-      filtered = properties; // Reset to all properties
+      filtered = properties; // Reset to all (already-safe) properties
     }
-
 
     setFilteredProperties(filtered);
   }, [searchTerm, selectedPriceRange, properties]);
 
   return (
-
     <div className="flex-grow px-4 xl:px-24">
       {loading ? (
         <div className="flex justify-center py-12 h-96">
@@ -136,13 +146,10 @@ const HomePage = () => {
               value={selectedPriceRange}
               onChange={(e) => setSelectedPriceRange(e.target.value)}
               className="w-full max-w-32 rounded-md py-2"
-              defaultSelectedKeys={['All']}
+              defaultSelectedKeys={["All"]}
             >
               {priceRanges.map((range) => (
-                <SelectItem
-                  key={range.value}
-                  value={range.value}
-                >
+                <SelectItem key={range.value} value={range.value}>
                   {range.key}
                 </SelectItem>
               ))}
@@ -154,7 +161,6 @@ const HomePage = () => {
         </>
       )}
     </div>
-
   );
 };
 
