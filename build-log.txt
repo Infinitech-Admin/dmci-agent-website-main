@@ -1,0 +1,667 @@
+
+> next-app-template@0.0.1 build
+> next build
+
+  ▲ Next.js 14.2.4
+  - Environments: .env
+  - Experiments (use with caution):
+    · missingSuspenseWithCSRBailout
+
+   Creating an optimized production build ...
+ ✓ (pwa) Compiling for server...
+ ✓ (pwa) Compiling for server...
+ ✓ (pwa) Compiling for client (static)...
+ ○ (pwa) Service worker: C:\Users\1\Documents\GitHub\dmci-agent-website-main\public\sw.js
+ ○ (pwa)   URL: /sw.js
+ ○ (pwa)   Scope: /
+ ✓ Compiled successfully
+   Skipping validation of types
+   Skipping linting
+   Collecting page data ...
+   Generating static pages (0/22) ...
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /appointment. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+An error occurred while fetching properties: n [Error]: Dynamic server usage: no-store fetch http://localhost:8000/api/user/property /compare
+    at C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\774.js:2:8645
+    at C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\774.js:2:15978
+    at a.with (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\774.js:1:8883)
+    at c.with (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\774.js:1:3083)
+    at c.startActiveSpan (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\774.js:1:18138)
+    at a.startActiveSpan (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\774.js:1:18672)
+    at C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\774.js:2:15511
+    at a.with (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\774.js:1:8883)
+    at c.with (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\774.js:1:3083)
+    at b.trace (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\774.js:2:15465) {
+  description: 'no-store fetch http://localhost:8000/api/user/property /compare',
+  digest: 'DYNAMIC_SERVER_USAGE'
+}
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /compare. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+An error occurred while fetching properties: n [Error]: Dynamic server usage: no-store fetch http://localhost:8000/api/user/property /compare
+    at C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\774.js:2:8645
+    at C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\774.js:2:15978
+    at a.with (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\774.js:1:8883)
+    at c.with (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\774.js:1:3083)
+    at c.startActiveSpan (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\774.js:1:18138)
+    at a.startActiveSpan (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\774.js:1:18672)
+    at C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\774.js:2:15511
+    at a.with (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\774.js:1:8883)
+    at c.with (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\774.js:1:3083)
+    at b.trace (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\774.js:2:15465) {
+  description: 'no-store fetch http://localhost:8000/api/user/property /compare',
+  digest: 'DYNAMIC_SERVER_USAGE'
+}
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /compare. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /career. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /listings. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /articles-news. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /articles-news. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /contact. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /contact. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /_not-found. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /_not-found. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /appointment. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+TypeError: Cannot destructure property 'auth' of 'e' as it is undefined.
+    at a (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:2:16598)
+    at m (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81392)
+    at C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81902
+    at Object.nr [as useMemo] (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:39130)
+    at t.useMemo (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:109856)
+    at C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81876
+    at nj (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:46251)
+    at nM (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:60839)
+    at nN (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64546)
+    at nB (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:67538) {
+  digest: '200594915'
+}
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /appointment. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+
+Error occurred prerendering page "/appointment". Read more: https://nextjs.org/docs/messages/prerender-error
+
+TypeError: Cannot destructure property 'auth' of 'e' as it is undefined.
+    at a (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:2:16598)
+    at m (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81392)
+    at C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81902
+    at Object.nr [as useMemo] (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:39130)
+    at t.useMemo (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:109856)
+    at C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81876
+    at nj (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:46251)
+    at nM (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:60839)
+    at nN (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64546)
+    at nB (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:67538)
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /career. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+TypeError: Cannot destructure property 'auth' of 'e' as it is undefined.
+    at a (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:2:16598)
+    at m (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81392)
+    at C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81902
+    at Object.nr [as useMemo] (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:39130)
+    at t.useMemo (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:109856)
+    at C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81876
+    at nj (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:46251)
+    at nM (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:60839)
+    at nN (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64546)
+    at nB (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:67538) {
+  digest: '200594915'
+}
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /career. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+
+Error occurred prerendering page "/career". Read more: https://nextjs.org/docs/messages/prerender-error
+
+TypeError: Cannot destructure property 'auth' of 'e' as it is undefined.
+    at a (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:2:16598)
+    at m (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81392)
+    at C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81902
+    at Object.nr [as useMemo] (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:39130)
+    at t.useMemo (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:109856)
+    at C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81876
+    at nj (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:46251)
+    at nM (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:60839)
+    at nN (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64546)
+    at nB (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:67538)
+TypeError: Cannot destructure property 'auth' of 'e' as it is undefined.
+    at a (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:2:16598)
+    at m (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81392)
+    at C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81902
+    at Object.nr [as useMemo] (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:39130)
+    at t.useMemo (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:109856)
+    at C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81876
+    at nj (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:46251)
+    at nM (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:60839)
+    at nN (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64546)
+    at nB (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:67538) {
+  digest: '200594915'
+}
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /compare. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+
+Error occurred prerendering page "/compare". Read more: https://nextjs.org/docs/messages/prerender-error
+
+TypeError: Cannot destructure property 'auth' of 'e' as it is undefined.
+    at a (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:2:16598)
+    at m (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81392)
+    at C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81902
+    at Object.nr [as useMemo] (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:39130)
+    at t.useMemo (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:109856)
+    at C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81876
+    at nj (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:46251)
+    at nM (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:60839)
+    at nN (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64546)
+    at nB (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:67538)
+TypeError: Cannot destructure property 'auth' of 'e' as it is undefined.
+    at a (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:2:16598)
+    at m (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81392)
+    at C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81902
+    at Object.nr [as useMemo] (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:39130)
+    at t.useMemo (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:109856)
+    at C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81876
+    at nj (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:46251)
+    at nM (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:60839)
+    at nN (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64546)
+    at nB (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:67538) {
+  digest: '200594915'
+}
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /articles-news. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+
+Error occurred prerendering page "/articles-news". Read more: https://nextjs.org/docs/messages/prerender-error
+
+TypeError: Cannot destructure property 'auth' of 'e' as it is undefined.
+    at a (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:2:16598)
+    at m (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81392)
+    at C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81902
+    at Object.nr [as useMemo] (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:39130)
+    at t.useMemo (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:109856)
+    at C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81876
+    at nj (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:46251)
+    at nM (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:60839)
+    at nN (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64546)
+    at nB (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:67538)
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /listings. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /properties. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /properties. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+TypeError: Cannot destructure property 'auth' of 'e' as it is undefined.
+    at a (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:2:16598)
+    at m (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81392)
+    at C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81902
+    at Object.nr [as useMemo] (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:39130)
+    at t.useMemo (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:109856)
+    at C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81876
+    at nj (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:46251)
+    at nM (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:60839)
+    at nN (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64546)
+    at nB (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:67538) {
+  digest: '200594915'
+}
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /properties. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+
+Error occurred prerendering page "/properties". Read more: https://nextjs.org/docs/messages/prerender-error
+
+TypeError: Cannot destructure property 'auth' of 'e' as it is undefined.
+    at a (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:2:16598)
+    at m (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81392)
+    at C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81902
+    at Object.nr [as useMemo] (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:39130)
+    at t.useMemo (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:109856)
+    at C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81876
+    at nj (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:46251)
+    at nM (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:60839)
+    at nN (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64546)
+    at nB (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:67538)
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+TypeError: Cannot destructure property 'auth' of 'e' as it is undefined.
+    at a (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:2:16598)
+    at m (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81392)
+    at C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81902
+    at Object.nr [as useMemo] (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:39130)
+    at t.useMemo (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:109856)
+    at C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81876
+    at nj (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:46251)
+    at nM (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:60839)
+    at nN (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64546)
+    at nB (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:67538) {
+  digest: '200594915'
+}
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+
+Error occurred prerendering page "/". Read more: https://nextjs.org/docs/messages/prerender-error
+
+TypeError: Cannot destructure property 'auth' of 'e' as it is undefined.
+    at a (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:2:16598)
+    at m (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81392)
+    at C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81902
+    at Object.nr [as useMemo] (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:39130)
+    at t.useMemo (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:109856)
+    at C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81876
+    at nj (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:46251)
+    at nM (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:60839)
+    at nN (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64546)
+    at nB (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:67538)
+TypeError: Cannot destructure property 'auth' of 'e' as it is undefined.
+    at a (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:2:16598)
+    at m (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81392)
+    at C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81902
+    at Object.nr [as useMemo] (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:39130)
+    at t.useMemo (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:109856)
+    at C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81876
+    at nj (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:46251)
+    at nM (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:60839)
+    at nN (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64546)
+    at nB (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:67538) {
+  digest: '200594915'
+}
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /listings. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+
+Error occurred prerendering page "/listings". Read more: https://nextjs.org/docs/messages/prerender-error
+
+TypeError: Cannot destructure property 'auth' of 'e' as it is undefined.
+    at a (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:2:16598)
+    at m (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81392)
+    at C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81902
+    at Object.nr [as useMemo] (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:39130)
+    at t.useMemo (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:109856)
+    at C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81876
+    at nj (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:46251)
+    at nM (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:60839)
+    at nN (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64546)
+    at nB (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:67538)
+TypeError: Cannot destructure property 'auth' of 'e' as it is undefined.
+    at a (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:2:16598)
+    at m (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81392)
+    at C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81902
+    at Object.nr [as useMemo] (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:39130)
+    at t.useMemo (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:109856)
+    at C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81876
+    at nj (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:46251)
+    at nM (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:60839)
+    at nN (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64546)
+    at nB (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:67538) {
+  digest: '200594915'
+}
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /contact. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+
+Error occurred prerendering page "/contact". Read more: https://nextjs.org/docs/messages/prerender-error
+
+TypeError: Cannot destructure property 'auth' of 'e' as it is undefined.
+    at a (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:2:16598)
+    at m (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81392)
+    at C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81902
+    at Object.nr [as useMemo] (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:39130)
+    at t.useMemo (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:109856)
+    at C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81876
+    at nj (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:46251)
+    at nM (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:60839)
+    at nN (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64546)
+    at nB (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:67538)
+TypeError: Cannot destructure property 'auth' of 'e' as it is undefined.
+    at a (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:2:16598)
+    at m (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81392)
+    at C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81902
+    at Object.nr [as useMemo] (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:39130)
+    at t.useMemo (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:109856)
+    at C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81876
+    at nj (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:46251)
+    at nM (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:60839)
+    at nN (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64546)
+    at nB (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:67538) {
+  digest: '200594915'
+}
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /_not-found. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+
+Error occurred prerendering page "/_not-found". Read more: https://nextjs.org/docs/messages/prerender-error
+
+TypeError: Cannot destructure property 'auth' of 'e' as it is undefined.
+    at a (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:2:16598)
+    at m (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81392)
+    at C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81902
+    at Object.nr [as useMemo] (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:39130)
+    at t.useMemo (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:109856)
+    at C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81876
+    at nj (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:46251)
+    at nM (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:60839)
+    at nN (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64546)
+    at nB (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:67538)
+   Generating static pages (5/22) 
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /property-finder. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /property-finder. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+TypeError: Cannot destructure property 'auth' of 'e' as it is undefined.
+    at a (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:2:16598)
+    at m (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81392)
+    at C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81902
+    at Object.nr [as useMemo] (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:39130)
+    at t.useMemo (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:109856)
+    at C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81876
+    at nj (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:46251)
+    at nM (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:60839)
+    at nN (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64546)
+    at nB (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:67538) {
+  digest: '200594915'
+}
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /property-finder. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+
+Error occurred prerendering page "/property-finder". Read more: https://nextjs.org/docs/messages/prerender-error
+
+TypeError: Cannot destructure property 'auth' of 'e' as it is undefined.
+    at a (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:2:16598)
+    at m (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81392)
+    at C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81902
+    at Object.nr [as useMemo] (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:39130)
+    at t.useMemo (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:109856)
+    at C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81876
+    at nj (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:46251)
+    at nM (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:60839)
+    at nN (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64546)
+    at nB (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:67538)
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /calculator. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /calculator. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+TypeError: Cannot destructure property 'auth' of 'e' as it is undefined.
+    at a (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:2:16598)
+    at m (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81392)
+    at C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81902
+    at Object.nr [as useMemo] (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:39130)
+    at t.useMemo (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:109856)
+    at C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81876
+    at nj (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:46251)
+    at nM (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:60839)
+    at nN (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64546)
+    at nB (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:67538) {
+  digest: '200594915'
+}
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /calculator. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+
+Error occurred prerendering page "/calculator". Read more: https://nextjs.org/docs/messages/prerender-error
+
+TypeError: Cannot destructure property 'auth' of 'e' as it is undefined.
+    at a (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:2:16598)
+    at m (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81392)
+    at C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81902
+    at Object.nr [as useMemo] (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:39130)
+    at t.useMemo (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:109856)
+    at C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81876
+    at nj (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:46251)
+    at nM (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:60839)
+    at nN (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64546)
+    at nB (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:67538)
+   Generating static pages (10/22) 
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /room-planner. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /room-planner. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+TypeError: Cannot destructure property 'auth' of 'e' as it is undefined.
+    at a (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:2:16598)
+    at m (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81392)
+    at C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81902
+    at Object.nr [as useMemo] (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:39130)
+    at t.useMemo (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:109856)
+    at C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81876
+    at nj (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:46251)
+    at nM (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:60839)
+    at nN (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64546)
+    at nB (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:67538) {
+  digest: '200594915'
+}
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /room-planner. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+
+Error occurred prerendering page "/room-planner". Read more: https://nextjs.org/docs/messages/prerender-error
+
+TypeError: Cannot destructure property 'auth' of 'e' as it is undefined.
+    at a (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:2:16598)
+    at m (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81392)
+    at C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81902
+    at Object.nr [as useMemo] (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:39130)
+    at t.useMemo (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:109856)
+    at C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81876
+    at nj (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:46251)
+    at nM (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:60839)
+    at nN (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64546)
+    at nB (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:67538)
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /submitproperty. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /submitproperty. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+TypeError: Cannot destructure property 'auth' of 'e' as it is undefined.
+    at a (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:2:16598)
+    at m (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81392)
+    at C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81902
+    at Object.nr [as useMemo] (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:39130)
+    at t.useMemo (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:109856)
+    at C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81876
+    at nj (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:46251)
+    at nM (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:60839)
+    at nN (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64546)
+    at nB (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:67538) {
+  digest: '200594915'
+}
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /submitproperty. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /terms-and-conditions. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /terms-and-conditions. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+TypeError: Cannot destructure property 'auth' of 'e' as it is undefined.
+    at a (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:2:16598)
+    at m (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81392)
+    at C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81902
+    at Object.nr [as useMemo] (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:39130)
+    at t.useMemo (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:109856)
+    at C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81876
+    at nj (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:46251)
+    at nM (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:60839)
+    at nN (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64546)
+    at nB (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:67538) {
+  digest: '200594915'
+}
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /terms-and-conditions. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+
+Error occurred prerendering page "/terms-and-conditions". Read more: https://nextjs.org/docs/messages/prerender-error
+
+TypeError: Cannot destructure property 'auth' of 'e' as it is undefined.
+    at a (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:2:16598)
+    at m (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81392)
+    at C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81902
+    at Object.nr [as useMemo] (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:39130)
+    at t.useMemo (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:109856)
+    at C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81876
+    at nj (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:46251)
+    at nM (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:60839)
+    at nN (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64546)
+    at nB (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:67538)
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /view/articles. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /view/articles. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+TypeError: Cannot destructure property 'auth' of 'e' as it is undefined.
+    at a (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:2:16598)
+    at m (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81392)
+    at C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81902
+    at Object.nr [as useMemo] (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:39130)
+    at t.useMemo (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:109856)
+    at C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81876
+    at nj (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:46251)
+    at nM (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:60839)
+    at nN (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64546)
+    at nB (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:67538) {
+  digest: '200594915'
+}
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /view/articles. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+
+Error occurred prerendering page "/view/articles". Read more: https://nextjs.org/docs/messages/prerender-error
+
+TypeError: Cannot destructure property 'auth' of 'e' as it is undefined.
+    at a (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:2:16598)
+    at m (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81392)
+    at C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81902
+    at Object.nr [as useMemo] (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:39130)
+    at t.useMemo (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:109856)
+    at C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81876
+    at nj (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:46251)
+    at nM (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:60839)
+    at nN (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64546)
+    at nB (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:67538)
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /subscription. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /subscription. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+TypeError: Cannot destructure property 'auth' of 'e' as it is undefined.
+    at a (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:2:16598)
+    at m (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81392)
+    at C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81902
+    at Object.nr [as useMemo] (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:39130)
+    at t.useMemo (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:109856)
+    at C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81876
+    at nj (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:46251)
+    at nM (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:60839)
+    at nN (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64546)
+    at nB (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:67538) {
+  digest: '200594915'
+}
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /subscription. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+
+Error occurred prerendering page "/subscription". Read more: https://nextjs.org/docs/messages/prerender-error
+
+TypeError: Cannot destructure property 'auth' of 'e' as it is undefined.
+    at a (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:2:16598)
+    at m (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81392)
+    at C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81902
+    at Object.nr [as useMemo] (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:39130)
+    at t.useMemo (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:109856)
+    at C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81876
+    at nj (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:46251)
+    at nM (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:60839)
+    at nN (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64546)
+    at nB (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:67538)
+   Generating static pages (16/22) 
+
+Error occurred prerendering page "/submitproperty". Read more: https://nextjs.org/docs/messages/prerender-error
+
+TypeError: Cannot destructure property 'auth' of 'e' as it is undefined.
+    at a (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:2:16598)
+    at m (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81392)
+    at C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81902
+    at Object.nr [as useMemo] (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:39130)
+    at t.useMemo (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:109856)
+    at C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81876
+    at nj (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:46251)
+    at nM (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:60839)
+    at nN (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64546)
+    at nB (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:67538)
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /agent. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /about. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /about. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+TypeError: Cannot destructure property 'auth' of 'e' as it is undefined.
+    at a (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:2:16598)
+    at m (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81392)
+    at C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81902
+    at Object.nr [as useMemo] (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:39130)
+    at t.useMemo (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:109856)
+    at C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81876
+    at nj (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:46251)
+    at nM (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:60839)
+    at nN (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64546)
+    at nB (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:67538) {
+  digest: '200594915'
+}
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /about. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /agent. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+TypeError: Cannot destructure property 'auth' of 'e' as it is undefined.
+    at a (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:2:16598)
+    at m (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81392)
+    at C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81902
+    at Object.nr [as useMemo] (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:39130)
+    at t.useMemo (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:109856)
+    at C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81876
+    at nj (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:46251)
+    at nM (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:60839)
+    at nN (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64546)
+    at nB (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:67538) {
+  digest: '200594915'
+}
+
+Error occurred prerendering page "/about". Read more: https://nextjs.org/docs/messages/prerender-error
+
+TypeError: Cannot destructure property 'auth' of 'e' as it is undefined.
+    at a (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:2:16598)
+    at m (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81392)
+    at C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81902
+    at Object.nr [as useMemo] (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:39130)
+    at t.useMemo (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:109856)
+    at C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81876
+    at nj (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:46251)
+    at nM (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:60839)
+    at nN (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64546)
+    at nB (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:67538)
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /agent. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+
+Error occurred prerendering page "/agent". Read more: https://nextjs.org/docs/messages/prerender-error
+
+TypeError: Cannot destructure property 'auth' of 'e' as it is undefined.
+    at a (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:2:16598)
+    at m (C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81392)
+    at C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81902
+    at Object.nr [as useMemo] (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:39130)
+    at t.useMemo (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:109856)
+    at C:\Users\1\Documents\GitHub\dmci-agent-website-main\.next\server\chunks\466.js:1:81876
+    at nj (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:46251)
+    at nM (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:60839)
+    at nN (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64546)
+    at nB (C:\Users\1\Documents\GitHub\dmci-agent-website-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:67538)
+ ✓ Generating static pages (22/22)
+
+> Export encountered errors on following paths:
+	/_not-found/page: /_not-found
+	/about/page: /about
+	/agent/page: /agent
+	/appointment/page: /appointment
+	/articles-news/page: /articles-news
+	/calculator/page: /calculator
+	/career/page: /career
+	/compare/page: /compare
+	/contact/page: /contact
+	/listings/page: /listings
+	/page: /
+	/properties/page: /properties
+	/property-finder/page: /property-finder
+	/room-planner/page: /room-planner
+	/submitproperty/page: /submitproperty
+	/subscription/page: /subscription
+	/terms-and-conditions/page: /terms-and-conditions
+	/view/articles/page: /view/articles
