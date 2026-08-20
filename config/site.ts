@@ -90,7 +90,7 @@ export const siteConfig = {
     crf: "http://apps.dmcihomes.com/OnlineCRF/Main?ac=EL25650",
     loancalculator: "/calculator",
     appointment: "/appointment",
-    planner: "/room-planner",
+    // planner: "/room-planner",
     download: "dmci-application.apk",
     career: "/career",
     agent: "/agent",

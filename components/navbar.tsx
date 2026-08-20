@@ -1,4 +1,5 @@
 "use client";
+
 import {
   Navbar as NextUINavbar,
   NavbarContent,
@@ -7,22 +8,15 @@ import {
   NavbarBrand,
   NavbarItem,
   NavbarMenuItem,
-  Modal,
-  ModalContent,
-  ModalHeader,
-  ModalBody,
-  ModalFooter,
   Button,
   Divider,
 } from "@heroui/react";
 
-import { useDisclosure } from "@heroui/react";
 import NextLink from "next/link";
 import clsx from "clsx";
 import { useState, useEffect } from "react";
 import { usePathname, useRouter } from "next/navigation";
 
-import AppFeatures from "./features";
 import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "@/components/theme-switch";
 import { BrandLogo } from "@/components/icons";
@@ -32,11 +26,10 @@ import { LuDownload } from "react-icons/lu";
 export const Navbar = () => {
   const pathname = usePathname();
   const router = useRouter();
-  const [menuOpen, setMenuOpen] = useState(false);
-  const { isOpen, onOpen, onClose } = useDisclosure();
-  const [selectedLink, setSelectedLink] = useState("");
 
-  // 👉 PWA INSTALL STATE
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  // PWA INSTALL STATE
   const [deferredPrompt, setDeferredPrompt] = useState<any>(null);
   const [showInstallButton, setShowInstallButton] = useState(false);
 
@@ -53,6 +46,7 @@ export const Navbar = () => {
     };
 
     window.addEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
+
     window.addEventListener("appinstalled", handleAppInstalled);
 
     return () => {
@@ -60,40 +54,29 @@ export const Navbar = () => {
         "beforeinstallprompt",
         handleBeforeInstallPrompt,
       );
+
       window.removeEventListener("appinstalled", handleAppInstalled);
     };
   }, []);
 
   const handleInstallApp = async () => {
     if (!deferredPrompt) return;
+
     deferredPrompt.prompt();
+
     const { outcome } = await deferredPrompt.userChoice;
 
     if (outcome === "accepted") {
       setShowInstallButton(false);
     }
+
     setDeferredPrompt(null);
   };
 
-  // 👉 ROOM PLANNER HANDLER
   const handleLinkClick = (href: string) => {
-    if (href === siteConfig.links.planner) {
-      setSelectedLink(href);
-      onOpen();
-    } else {
-      setMenuOpen(false);
-      router.push(href);
-    }
+    setMenuOpen(false);
+    router.push(href);
   };
-
-  const handleConfirmNavigation = () => {
-    window.open(selectedLink, "_blank", "noopener noreferrer");
-    onClose();
-  };
-
-  if (pathname.includes("/room-planner")) {
-    return null;
-  }
 
   return (
     <>
@@ -107,16 +90,17 @@ export const Navbar = () => {
         <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
           <NavbarBrand as="li" className="gap-3">
             <NextLink
-              className="flex justify-between items-center gap-1"
+              className="flex items-center justify-between gap-1"
               href="/"
             >
               <BrandLogo />
+
               <p className="font-bold text-2xl">DMCI HOMES</p>
             </NextLink>
           </NavbarBrand>
         </NavbarContent>
 
-        {/* Desktop Nav */}
+        {/* Desktop Navigation */}
         <NavbarContent className="hidden xl:flex" justify="center">
           <NavbarItem>
             <ul className="hidden lg:flex gap-6">
@@ -125,7 +109,7 @@ export const Navbar = () => {
                   <NextLink
                     className={clsx(
                       "w-full text-left uppercase",
-                      pathname === item.href ? "text-green-500 font-bold" : "",
+                      pathname === item.href && "text-green-500 font-bold",
                     )}
                     href={item.href}
                   >
@@ -146,7 +130,7 @@ export const Navbar = () => {
             {/* Customer Reservation Form */}
             <FormUtilities />
 
-            {/* ✅ Install App aligned with icons */}
+            {/* Install App */}
             {showInstallButton && (
               <Button
                 onPress={handleInstallApp}
@@ -158,7 +142,7 @@ export const Navbar = () => {
               </Button>
             )}
 
-            {/* Theme Switch (last sa kanan) */}
+            {/* Theme Switch */}
             <ThemeSwitch />
           </NavbarItem>
         </NavbarContent>
@@ -166,18 +150,21 @@ export const Navbar = () => {
         {/* Mobile Navbar */}
         <NavbarContent className="xl:hidden basis-1 pl-4" justify="end">
           <ThemeSwitch />
+
           <NavbarMenuToggle />
         </NavbarContent>
 
         {/* Mobile Menu */}
         <NavbarMenu>
           <div className="mt-2 flex flex-col gap-2">
+            {/* Main Navigation */}
             {siteConfig.navMenuItems.map((item, index) => (
-              <NavbarMenuItem key={`${item}-${index}`}>
+              <NavbarMenuItem key={`${item.href}-${index}`}>
                 <button
+                  type="button"
                   className={clsx(
                     "w-full text-left",
-                    pathname === item.href ? "text-blue-500 font-bold" : "",
+                    pathname === item.href && "text-blue-500 font-bold",
                   )}
                   onClick={() => handleLinkClick(item.href)}
                 >
@@ -188,28 +175,31 @@ export const Navbar = () => {
 
             <Divider className="my-4" />
 
+            {/* Form & Utilities */}
             <div className="space-y-1">
               <p className="text-small text-default-400">Form & Utilities</p>
             </div>
 
             {siteConfig.navMenuItemsLinks.map((item, index) => (
-              <NavbarMenuItem key={`${item}-${index}`}>
+              <NavbarMenuItem key={`${item.href}-${index}`}>
                 {item.download ? (
                   <a
+                    href={item.href}
                     download
                     className={clsx(
                       "w-full text-left block",
-                      pathname === item.href ? "text-blue-500 font-bold" : "",
+                      pathname === item.href && "text-blue-500 font-bold",
                     )}
-                    href={item.href}
+                    onClick={() => setMenuOpen(false)}
                   >
                     {item.label}
                   </a>
                 ) : (
                   <button
+                    type="button"
                     className={clsx(
                       "w-full text-left",
-                      pathname === item.href ? "text-blue-500 font-bold" : "",
+                      pathname === item.href && "text-blue-500 font-bold",
                     )}
                     onClick={() => handleLinkClick(item.href)}
                   >
@@ -219,39 +209,24 @@ export const Navbar = () => {
               </NavbarMenuItem>
             ))}
 
-            {/* ✅ Install App inside Mobile Menu */}
+            {/* Install App */}
             {showInstallButton && (
-              <NavbarMenuItem
-                className="cursor-pointer text-green-600 font-medium"
-                onClick={() => {
-                  handleInstallApp();
-                  setMenuOpen(false);
-                }}
-              >
-                Install App
+              <NavbarMenuItem>
+                <button
+                  type="button"
+                  className="w-full text-left cursor-pointer text-green-600 font-medium"
+                  onClick={() => {
+                    handleInstallApp();
+                    setMenuOpen(false);
+                  }}
+                >
+                  Install App
+                </button>
               </NavbarMenuItem>
             )}
           </div>
         </NavbarMenu>
       </NextUINavbar>
-
-      {/* Modal Confirmation for Room Planner */}
-      <Modal isOpen={isOpen} onClose={onClose}>
-        <ModalContent>
-          <ModalHeader>Open Room Planner</ModalHeader>
-          <ModalBody>
-            <p>Are you sure you want to open the room planner in a new tab?</p>
-          </ModalBody>
-          <ModalFooter>
-            <Button variant="light" onPress={onClose}>
-              Cancel
-            </Button>
-            <Button variant="light" onPress={handleConfirmNavigation}>
-              Open Planner
-            </Button>
-          </ModalFooter>
-        </ModalContent>
-      </Modal>
     </>
   );
 };
