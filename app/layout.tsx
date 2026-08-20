@@ -2,23 +2,15 @@
 import "@/styles/globals.css";
 import { Metadata, Viewport } from "next";
 import clsx from "clsx";
-import dynamic from "next/dynamic";
 import { Providers } from "./providers";
 import { siteConfig } from "@/config/site";
+import { Navbar } from "@/components/navbar";
 import Footer from "@/components/footer";
 import FloatingIcons from "@/components/socmed";
 import Chatbot from "@/components/chatbot";
 import { Poppins } from "next/font/google";
 import { Toaster } from "react-hot-toast";
 import ScrollToTop from "@/components/scrollToTop";
-
-// Navbar uses @heroui/react components that crash during SSR prerendering
-// (TypeError: Cannot destructure property 'auth' of 'e' as it is undefined).
-// Rendering it client-only side-steps the prerender crash.
-const Navbar = dynamic(
-  () => import("@/components/navbar").then((mod) => ({ default: mod.Navbar })),
-  { ssr: false },
-);
 
 export const metadata: Metadata = {
   title: {
