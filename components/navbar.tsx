@@ -7,16 +7,16 @@ import {
   NavbarBrand,
   NavbarItem,
   NavbarMenuItem,
-  // Modal,
-  // ModalContent,
-  // ModalHeader,
-  // ModalBody,
-  // ModalFooter,
+  Modal,
+  ModalContent,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
   Button,
   Divider,
 } from "@heroui/react";
 
-// import { useDisclosure } from "@heroui/react"; // 🚫 room planner modal disabled
+import { useDisclosure } from "@heroui/react";
 import NextLink from "next/link";
 import clsx from "clsx";
 import { useState, useEffect } from "react";
@@ -33,8 +33,8 @@ export const Navbar = () => {
   const pathname = usePathname();
   const router = useRouter();
   const [menuOpen, setMenuOpen] = useState(false);
-  // const { isOpen, onOpen, onClose } = useDisclosure(); // 🚫 room planner modal disabled
-  // const [selectedLink, setSelectedLink] = useState(""); // 🚫 room planner modal disabled
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const [selectedLink, setSelectedLink] = useState("");
 
   // 👉 PWA INSTALL STATE
   const [deferredPrompt, setDeferredPrompt] = useState<any>(null);
@@ -75,23 +75,25 @@ export const Navbar = () => {
     setDeferredPrompt(null);
   };
 
-  // 👉 ROOM PLANNER HANDLER (DISABLED)
-  // Previously branched to open a confirmation modal + new tab for the
-  // room planner link. Now every mobile menu item just navigates normally.
+  // 👉 ROOM PLANNER HANDLER
   const handleLinkClick = (href: string) => {
-    setMenuOpen(false);
-    router.push(href);
+    if (href === siteConfig.links.planner) {
+      setSelectedLink(href);
+      onOpen();
+    } else {
+      setMenuOpen(false);
+      router.push(href);
+    }
   };
 
-  // const handleConfirmNavigation = () => {
-  //   window.open(selectedLink, "_blank", "noopener noreferrer");
-  //   onClose();
-  // };
+  const handleConfirmNavigation = () => {
+    window.open(selectedLink, "_blank", "noopener noreferrer");
+    onClose();
+  };
 
-  // 🚫 Room planner full-page nav hide (disabled)
-  // if (pathname.includes("/room-planner")) {
-  //   return null;
-  // }
+  if (pathname.includes("/room-planner")) {
+    return null;
+  }
 
   return (
     <>
@@ -233,8 +235,7 @@ export const Navbar = () => {
         </NavbarMenu>
       </NextUINavbar>
 
-      {/* 🚫 Room Planner Confirmation Modal (disabled) */}
-      {/*
+      {/* Modal Confirmation for Room Planner */}
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalContent>
           <ModalHeader>Open Room Planner</ModalHeader>
@@ -251,7 +252,6 @@ export const Navbar = () => {
           </ModalFooter>
         </ModalContent>
       </Modal>
-      */}
     </>
   );
 };

@@ -70,7 +70,6 @@ export const siteConfig = {
       label: "Set Appointment",
       href: "/appointment",
     },
-    // 🚫 Room Planner disabled
     // {
     //   label: "Room Planner",
     //   href: "/room-planner",
@@ -91,7 +90,7 @@ export const siteConfig = {
     crf: "http://apps.dmcihomes.com/OnlineCRF/Main?ac=EL25650",
     loancalculator: "/calculator",
     appointment: "/appointment",
-    // planner: "/room-planner", // 🚫 Room Planner disabled
+    planner: "/room-planner",
     download: "dmci-application.apk",
     career: "/career",
     agent: "/agent",
